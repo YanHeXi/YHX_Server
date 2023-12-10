@@ -7,7 +7,7 @@
 // #include "macro.h"
 // #include "env.h"
 
-namespace sylar
+namespace yhx
 {
 
     const char *LogLevel::ToString(LogLevel::Level level)
@@ -289,7 +289,7 @@ namespace sylar
     void Logger::setFormatter(const std::string &val)
     {
         std::cout << "---" << val << std::endl;
-        sylar::LogFormatter::ptr new_val(new sylar::LogFormatter(val));
+        yhx::LogFormatter::ptr new_val(new yhx::LogFormatter(val));
         if (new_val->isError())
         {
             std::cout << "Logger setFormatter name=" << m_name
@@ -829,8 +829,8 @@ namespace sylar
         }
     };
 
-    sylar::ConfigVar<std::set<LogDefine>>::ptr g_log_defines =
-        sylar::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
+    yhx::ConfigVar<std::set<LogDefine>>::ptr g_log_defines =
+        yhx::Config::Lookup("logs", std::set<LogDefine>(), "logs config");
 
     struct LogIniter
     {
@@ -839,17 +839,17 @@ namespace sylar
             g_log_defines->addListener([](const std::set<LogDefine> &old_value,
                                           const std::set<LogDefine> &new_value)
                                        {
-            SYLAR_LOG_INFO(SYLAR_LOG_ROOT()) << "on_logger_conf_changed";
+            yhx_LOG_INFO(yhx_LOG_ROOT()) << "on_logger_conf_changed";
             for(auto& i : new_value) {
                 auto it = old_value.find(i);
-                sylar::Logger::ptr logger;
+                yhx::Logger::ptr logger;
                 if(it == old_value.end()) {
                     //新增logger
-                    logger = SYLAR_LOG_NAME(i.name);
+                    logger = yhx_LOG_NAME(i.name);
                 } else {
                     if(!(i == *it)) {
                         //修改的logger
-                        logger = SYLAR_LOG_NAME(i.name);
+                        logger = yhx_LOG_NAME(i.name);
                     } else {
                         continue;
                     }
@@ -863,11 +863,11 @@ namespace sylar
 
                 logger->clearAppenders();
                 for(auto& a : i.appenders) {
-                    sylar::LogAppender::ptr ap;
+                    yhx::LogAppender::ptr ap;
                     if(a.type == 1) {
                         ap.reset(new FileLogAppender(a.file));
                     } else if(a.type == 2) {
-                        if(!sylar::EnvMgr::GetInstance()->has("d")) {
+                        if(!yhx::EnvMgr::GetInstance()->has("d")) {
                             ap.reset(new StdoutLogAppender);
                         } else {
                             continue;
@@ -891,7 +891,7 @@ namespace sylar
                 auto it = new_value.find(i);
                 if(it == new_value.end()) {
                     //删除logger
-                    auto logger = SYLAR_LOG_NAME(i.name);
+                    auto logger = yhx_LOG_NAME(i.name);
                     logger->setLevel((LogLevel::Level)0);
                     logger->clearAppenders();
                 }
