@@ -21,7 +21,7 @@ namespace yhx
     class LogLevel
     {
     public:
-        enum Level
+        enum class Level
         {
             UNKNOW = 0,
             DEBUG = 1,
@@ -31,9 +31,8 @@ namespace yhx
             FATAL = 5
         };
 
-        static const char *ToString(LogLevel::Level level);
-
-        static LogLevel::Level FromString(const std::string &str);
+        static const char *ToString(Level level);
+        static Level FromString(const std::string &str);
     };
 
     class LogEvent
@@ -41,15 +40,16 @@ namespace yhx
     public:
         using ptr = std::shared_ptr<LogEvent>;
 
-        LogEvent(std::shared_ptr<Logger> logger,
-                 LogLevel::Level level,
-                 const char *file,
-                 int32_t line,
-                 uint32_t elapse,
-                 uint32_t thread_id,
-                 uint32_t fiber_id,
-                 uint64_t time,
-                 const std::string &thread_name);
+        LogEvent(
+            // std::shared_ptr<Logger> logger,
+            //  LogLevel::Level level,
+            const char *file,
+            int32_t line,
+            uint32_t elapse,
+            uint32_t thread_id,
+            uint32_t fiber_id,
+            uint64_t time);
+        // const std::string &thread_name
 
         const char *getFile() const { return m_file; }
 
@@ -107,8 +107,13 @@ namespace yhx
 
         LogFormatter(const std::string &pattern);
 
-        std::string format(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
-        std::ostream &format(std::ostream &ofs, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
+        std::string format(std::shared_ptr<Logger> logger,
+                           LogLevel::Level level,
+                           LogEvent::ptr event);
+        std::ostream &format(std::ostream &ofs,
+                             std::shared_ptr<Logger> logger,
+                             LogLevel::Level level,
+                             LogEvent::ptr event);
 
     public:
         class FormatItem
@@ -142,12 +147,12 @@ namespace yhx
 
     public:
         using ptr = std::shared_ptr<LogAppender>;
-        using ptr = Spinlock MutexType;
+        // using ptr = Spinlock MutexType;
 
         virtual ~LogAppender() {}
 
         virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
-        virtual std::string toYamlString() = 0;
+        // virtual std::string toYamlString() = 0;
         void setFormatter(LogFormatter::ptr val);
 
         LogFormatter::ptr getFormatter();
@@ -157,9 +162,9 @@ namespace yhx
         void setLevel(LogLevel::Level val) { m_level = val; }
 
     protected:
-        LogLevel::Level m_level = LogLevel::DEBUG;
+        LogLevel::Level m_level = LogLevel::Level::DEBUG;
         bool m_hasFormatter = false;
-        MutexType m_mutex;
+        // MutexType m_mutex;
         LogFormatter::ptr m_formatter;
     };
 
@@ -169,7 +174,7 @@ namespace yhx
 
     public:
         using ptr = std::shared_ptr<Logger>;
-        using ptr = Spinlock MutexType;
+        // using ptr = Spinlock MutexType;
 
         Logger(const std::string &name = "root");
 
@@ -203,12 +208,12 @@ namespace yhx
 
         LogFormatter::ptr getFormatter();
 
-        std::string toYamlString();
+        // std::string toYamlString();
 
     private:
         std::string m_name;
         LogLevel::Level m_level;
-        MutexType m_mutex;
+        // MutexType m_mutex;
         std::list<LogAppender::ptr> m_appenders;
         LogFormatter::ptr m_formatter;
         Logger::ptr m_root;
@@ -221,7 +226,7 @@ namespace yhx
         void log(Logger::ptr logger,
                  LogLevel::Level level,
                  LogEvent::ptr event) override;
-        std::string toYamlString() override;
+        // std::string toYamlString() override;
     };
 
     class FileLogAppender : public LogAppender
@@ -229,8 +234,12 @@ namespace yhx
     public:
         using ptr = std::shared_ptr<FileLogAppender>;
         FileLogAppender(const std::string &filename);
-        void log(Logger::ptr logger, LogLevel::Level level, LogEvent::ptr event) override;
-        std::string toYamlString() override;
+
+        void log(Logger::ptr logger,
+                 LogLevel::Level level,
+                 LogEvent::ptr event) override;
+
+        // std::string toYamlString() override;
 
         bool reopen();
 
@@ -240,27 +249,27 @@ namespace yhx
         uint64_t m_lastTime = 0;
     };
 
-    class LoggerManager
-    {
-    public:
-        using ptr = Spinlock MutexType;
+    // class LoggerManager
+    // {
+    // public:
+    //     using ptr = Spinlock MutexType;
 
-        LoggerManager();
+    //     LoggerManager();
 
-        Logger::ptr getLogger(const std::string &name);
+    //     Logger::ptr getLogger(const std::string &name);
 
-        void init();
+    //     void init();
 
-        Logger::ptr getRoot() const { return m_root; }
+    //     Logger::ptr getRoot() const { return m_root; }
 
-        std::string toYamlString();
+    //     std::string toYamlString();
 
-    private:
-        MutexType m_mutex;
-        std::map<std::string, Logger::ptr> m_loggers;
-        Logger::ptr m_root;
-    };
+    // private:
+    //     MutexType m_mutex;
+    //     std::map<std::string, Logger::ptr> m_loggers;
+    //     Logger::ptr m_root;
+    // };
 
-    using ptr = yhx::Singleton<LoggerManager> LoggerMgr;
+    // using ptr = yhx::Singleton<LoggerManager> LoggerMgr;
 
 }
