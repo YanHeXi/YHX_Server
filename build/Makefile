@@ -193,6 +193,30 @@ yhx/log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/log.cc.s
 .PHONY : yhx/log.cc.s
 
+yhx/util.o: yhx/util.cc.o
+.PHONY : yhx/util.o
+
+# target to build an object file
+yhx/util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/util.cc.o
+.PHONY : yhx/util.cc.o
+
+yhx/util.i: yhx/util.cc.i
+.PHONY : yhx/util.i
+
+# target to preprocess a source file
+yhx/util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/util.cc.i
+.PHONY : yhx/util.cc.i
+
+yhx/util.s: yhx/util.cc.s
+.PHONY : yhx/util.s
+
+# target to generate assembly for a file
+yhx/util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/util.cc.s
+.PHONY : yhx/util.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,6 +233,9 @@ help:
 	@echo "... yhx/log.o"
 	@echo "... yhx/log.i"
 	@echo "... yhx/log.s"
+	@echo "... yhx/util.o"
+	@echo "... yhx/util.i"
+	@echo "... yhx/util.s"
 .PHONY : help
 
 

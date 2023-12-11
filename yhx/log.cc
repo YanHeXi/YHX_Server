@@ -1,7 +1,7 @@
 #include "log.h"
 #include <iostream>
 #include <functional>
-#include <time.h>
+#include <ctime>
 // #include "config.h"
 // #include "util.h"
 // #include "macro.h"
@@ -285,8 +285,8 @@ namespace yhx
     };
 
     LogEvent::LogEvent(
-        // std::shared_ptr<Logger> logger,
-        //    LogLevel::Level level,
+        std::shared_ptr<Logger> logger,
+        LogLevel::Level level,
         const char *file,
         int32_t line,
         uint32_t elapse,
@@ -299,10 +299,10 @@ namespace yhx
           m_elapse(elapse),
           m_threadId(thread_id),
           m_fiberId(fiber_id),
-          m_time(time)
-    //   m_threadName(thread_name),
-    //   m_logger(logger),
-    //   m_level(level)
+          m_time(time),
+          //   m_threadName(thread_name),
+          m_logger(logger),
+          m_level(level)
     {
     }
 
@@ -700,35 +700,35 @@ namespace yhx
                 }
             }
 
-            std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
+            // std::cout << "(" << std::get<0>(i) << ") - (" << std::get<1>(i) << ") - (" << std::get<2>(i) << ")" << std::endl;
         }
         // std::cout << m_items.size() << std::endl;
     }
 
-    // LoggerManager::LoggerManager()
-    // {
-    //     m_root.reset(new Logger);
-    //     m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
+    LoggerManager::LoggerManager()
+    {
+        m_root.reset(new Logger);
+        m_root->addAppender(LogAppender::ptr(new StdoutLogAppender));
 
-    //     m_loggers[m_root->m_name] = m_root;
+        m_loggers[m_root->m_name] = m_root;
 
-    //     init();
-    // }
+        // init();
+    }
 
-    // Logger::ptr LoggerManager::getLogger(const std::string &name)
-    // {
-    //     MutexType::Lock lock(m_mutex);
-    //     auto it = m_loggers.find(name);
-    //     if (it != m_loggers.end())
-    //     {
-    //         return it->second;
-    //     }
+    Logger::ptr LoggerManager::getLogger(const std::string &name)
+    {
+        // MutexType::Lock lock(m_mutex);
+        auto it = m_loggers.find(name);
+        if (it != m_loggers.end())
+        {
+            return it->second;
+        }
 
-    //     Logger::ptr logger(new Logger(name));
-    //     logger->m_root = m_root;
-    //     m_loggers[name] = logger;
-    //     return logger;
-    // }
+        Logger::ptr logger(new Logger(name));
+        logger->m_root = m_root;
+        m_loggers[name] = logger;
+        return logger;
+    }
 
     // struct LogAppenderDefine
     // {

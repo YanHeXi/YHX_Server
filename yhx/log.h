@@ -9,9 +9,89 @@
 #include <stdarg.h>
 #include <map>
 // #include "util.h"
-// #include "singleton.h"
+#include "singleton.h"
 // #include "thread.h"
 
+/**
+ * @brief 使用流式方式将日志级别level的日志写入到logger
+ */
+#define YHX_LOG_LEVEL(logger, level)                                                                  \
+    if (logger->getLevel() <= level)                                                                  \
+    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                             \
+                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(), \
+                                                           yhx::GetFiberId(), time(0))))              \
+        .getSS()
+
+/**
+ * @brief 使用流式方式将日志级别debug的日志写入到logger
+ */
+#define YHX_LOG_DEBUG(logger) YHX_LOG_LEVEL(logger, yhx::LogLevel::Level::DEBUG)
+
+/**
+ * @brief 使用流式方式将日志级别info的日志写入到logger
+ */
+#define YHX_LOG_INFO(logger) YHX_LOG_LEVEL(logger, yhx::LogLevel::Level::INFO)
+
+/**
+ * @brief 使用流式方式将日志级别warn的日志写入到logger
+ */
+#define YHX_LOG_WARN(logger) YHX_LOG_LEVEL(logger, yhx::LogLevel::Level::WARN)
+
+/**
+ * @brief 使用流式方式将日志级别error的日志写入到logger
+ */
+#define YHX_LOG_ERROR(logger) YHX_LOG_LEVEL(logger, yhx::LogLevel::Level::ERROR)
+
+/**
+ * @brief 使用流式方式将日志级别fatal的日志写入到logger
+ */
+#define YHX_LOG_FATAL(logger) YHX_LOG_LEVEL(logger, yhx::LogLevel::Level::FATAL)
+
+/**
+ * @brief 使用格式化方式将日志级别level的日志写入到logger
+ */
+#define YHX_LOG_FMT_LEVEL(logger, level, fmt, ...)                                                    \
+    if (logger->getLevel() <= level)                                                                  \
+    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                             \
+                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(), \
+                                                           yhx::GetFiberId(), time(0))))              \
+        .getEvent()                                                                                   \
+        ->format(fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别debug的日志写入到logger
+ */
+#define YHX_LOG_FMT_DEBUG(logger, fmt, ...) YHX_LOG_FMT_LEVEL(logger, yhx::LogLevel::Level::DEBUG, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别info的日志写入到logger
+ */
+#define YHX_LOG_FMT_INFO(logger, fmt, ...) YHX_LOG_FMT_LEVEL(logger, yhx::LogLevel::Level::INFO, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别warn的日志写入到logger
+ */
+#define YHX_LOG_FMT_WARN(logger, fmt, ...) YHX_LOG_FMT_LEVEL(logger, yhx::LogLevel::Level::WARN, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别error的日志写入到logger
+ */
+#define YHX_LOG_FMT_ERROR(logger, fmt, ...) YHX_LOG_FMT_LEVEL(logger, yhx::LogLevel::Level::ERROR, fmt, __VA_ARGS__)
+
+/**
+ * @brief 使用格式化方式将日志级别fatal的日志写入到logger
+ */
+#define YHX_LOG_FMT_FATAL(logger, fmt, ...) YHX_LOG_FMT_LEVEL(logger, yhx::LogLevel::Level::FATAL, fmt, __VA_ARGS__)
+
+/**
+ * @brief 获取主日志器
+ */
+#define YHX_LOG_ROOT() yhx::LoggerMgr::GetInstance()->getRoot()
+
+/**
+ * @brief 获取name的日志器
+ */
+#define YHX_LOG_NAME(name) yhx::LoggerMgr::GetInstance()->getLogger(name)
 namespace yhx
 {
 
@@ -41,8 +121,8 @@ namespace yhx
         using ptr = std::shared_ptr<LogEvent>;
 
         LogEvent(
-            // std::shared_ptr<Logger> logger,
-            //  LogLevel::Level level,
+            std::shared_ptr<Logger> logger,
+            LogLevel::Level level,
             const char *file,
             int32_t line,
             uint32_t elapse,
@@ -249,27 +329,27 @@ namespace yhx
         uint64_t m_lastTime = 0;
     };
 
-    // class LoggerManager
-    // {
-    // public:
-    //     using ptr = Spinlock MutexType;
+    class LoggerManager
+    {
+    public:
+        // using ptr = Spinlock MutexType;
 
-    //     LoggerManager();
+        LoggerManager();
 
-    //     Logger::ptr getLogger(const std::string &name);
+        Logger::ptr getLogger(const std::string &name);
 
-    //     void init();
+        // void init();
 
-    //     Logger::ptr getRoot() const { return m_root; }
+        Logger::ptr getRoot() const { return m_root; }
 
-    //     std::string toYamlString();
+        // std::string toYamlString();
 
-    // private:
-    //     MutexType m_mutex;
-    //     std::map<std::string, Logger::ptr> m_loggers;
-    //     Logger::ptr m_root;
-    // };
+    private:
+        // MutexType m_mutex;
+        std::map<std::string, Logger::ptr> m_loggers;
+        Logger::ptr m_root;
+    };
 
-    // using ptr = yhx::Singleton<LoggerManager> LoggerMgr;
+    using LoggerMgr = yhx::Singleton<LoggerManager>;
 
 }
