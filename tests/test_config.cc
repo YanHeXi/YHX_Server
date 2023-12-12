@@ -1,17 +1,17 @@
 #include "yhx/config.h"
 #include "yhx/log.h"
-// #include <yaml-cpp/yaml.h>
+#include <yaml-cpp/yaml.h>
 // #include "yhx/env.h"
 #include <iostream>
 
 yhx::ConfigVar<int>::ptr g_int_value_config =
     yhx::Config::Lookup("system.port", (int)8080, "system port");
 
-// yhx::ConfigVar<float>::ptr g_int_valuex_config =
-//     yhx::Config::Lookup("system.port", (float)8080, "system port");
+yhx::ConfigVar<float>::ptr g_int_valuex_config =
+    yhx::Config::Lookup("system.port", (float)8080, "system port");
 
-// yhx::ConfigVar<float>::ptr g_float_value_config =
-//     yhx::Config::Lookup("system.value", (float)10.2f, "system value");
+yhx::ConfigVar<float>::ptr g_float_value_config =
+    yhx::Config::Lookup("system.value", (float)10.2f, "system value");
 
 // yhx::ConfigVar<std::vector<int>>::ptr g_int_vec_value_config =
 //     yhx::Config::Lookup("system.int_vec", std::vector<int>{1, 2}, "system int vec");
@@ -31,49 +31,49 @@ yhx::ConfigVar<int>::ptr g_int_value_config =
 // yhx::ConfigVar<std::unordered_map<std::string, int>>::ptr g_str_int_umap_value_config =
 //     yhx::Config::Lookup("system.str_int_umap", std::unordered_map<std::string, int>{{"k", 2}}, "system str int map");
 
-// void print_yaml(const YAML::Node &node, int level)
-// {
-//     if (node.IsScalar())
-//     {
-//         YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
-//                                      << node.Scalar() << " - " << node.Type() << " - " << level;
-//     }
-//     else if (node.IsNull())
-//     {
-//         YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
-//                                      << "NULL - " << node.Type() << " - " << level;
-//     }
-//     else if (node.IsMap())
-//     {
-//         for (auto it = node.begin();
-//              it != node.end(); ++it)
-//         {
-//             YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
-//                                          << it->first << " - " << it->second.Type() << " - " << level;
-//             print_yaml(it->second, level + 1);
-//         }
-//     }
-//     else if (node.IsSequence())
-//     {
-//         for (size_t i = 0; i < node.size(); ++i)
-//         {
-//             YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
-//                                          << i << " - " << node[i].Type() << " - " << level;
-//             print_yaml(node[i], level + 1);
-//         }
-//     }
-// }
+void print_yaml(const YAML::Node &node, int level)
+{
+    if (node.IsScalar()) // 如果节点是标量（Scalar），即表示一个单独的值，它会输出该值、节点类型和当前层级。
+    {
+        YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
+                                     << node.Scalar() << " - " << node.Type() << " - " << level;
+    }
+    else if (node.IsNull()) // 如果节点是空（Null），它会输出 "NULL"、节点类型和当前层级。
+    {
+        YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
+                                     << "NULL - " << node.Type() << " - " << level;
+    }
+    else if (node.IsMap()) // 如果节点是映射（Map），它会遍历映射的键值对，并输出键、节点类型和当前层级，然后递归调用 print_yaml 处理其值（即映射中的节点）。
+    {
+        for (auto it = node.begin();
+             it != node.end(); ++it)
+        {
+            YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
+                                         << it->first << " - " << it->second.Type() << " - " << level;
+            print_yaml(it->second, level + 1);
+        }
+    }
+    else if (node.IsSequence()) // 如果节点是序列（Sequence），它会遍历序列中的元素，输出元素索引、节点类型和当前层级，然后递归调用 print_yaml 处理每个元素。
+    {
+        for (size_t i = 0; i < node.size(); ++i)
+        {
+            YHX_LOG_INFO(YHX_LOG_ROOT()) << std::string(level * 4, ' ')
+                                         << i << " - " << node[i].Type() << " - " << level;
+            print_yaml(node[i], level + 1);
+        }
+    }
+}
 
-// void test_yaml()
-// {
-//     YAML::Node root = YAML::LoadFile("/home/yhx/workspace/yhx/bin/conf/log.yml");
-//     // print_yaml(root, 0);
-//     // YHX_LOG_INFO(YHX_LOG_ROOT()) << root.Scalar();
+void test_yaml()
+{
+    YAML::Node root = YAML::LoadFile("/home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/conf/log.yml");
+    print_yaml(root, 0);
+    YHX_LOG_INFO(YHX_LOG_ROOT()) << root.Scalar();
 
-//     YHX_LOG_INFO(YHX_LOG_ROOT()) << root["test"].IsDefined();
-//     YHX_LOG_INFO(YHX_LOG_ROOT()) << root["logs"].IsDefined();
-//     YHX_LOG_INFO(YHX_LOG_ROOT()) << root;
-// }
+    // YHX_LOG_INFO(YHX_LOG_ROOT()) << root["test"].IsDefined();
+    // YHX_LOG_INFO(YHX_LOG_ROOT()) << root["logs"].IsDefined();
+    // YHX_LOG_INFO(YHX_LOG_ROOT()) << root;
+}
 
 // void test_config()
 // {
@@ -202,9 +202,9 @@ int main(int argc, char **argv)
 {
 
     YHX_LOG_INFO(YHX_LOG_ROOT()) << g_int_value_config->getValue();
-    YHX_LOG_INFO(YHX_LOG_ROOT()) << g_int_value_config->toString();
+    YHX_LOG_INFO(YHX_LOG_ROOT()) << g_float_value_config->toString();
 
-    // test_yaml();
+    test_yaml();
     // test_config();
     // test_class();
     // test_log();

@@ -25,13 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 15,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -56,6 +62,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/."
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/yanhexi/Downloads/tool/yaml/yaml-cpp/include/yaml-cpp"
 				}
 			],
 			"language" : "CXX",

@@ -4,7 +4,7 @@
 #include <sstream>
 #include <stdexcept>
 #include <boost/lexical_cast.hpp>
-// #include <yaml-cpp/yaml.h>
+#include <yaml-cpp/yaml.h>
 #include <vector>
 #include <list>
 #include <map>
@@ -25,8 +25,10 @@ namespace yhx
     public:
         using ptr = std::shared_ptr<ConfigVarBase>;
 
-        ConfigVarBase(const std::string &name, const std::string &description = "")
-            : m_name(name), m_description(description)
+        ConfigVarBase(const std::string &name,
+                      const std::string &description = "")
+            : m_name(name),
+              m_description(description)
         {
             std::transform(m_name.begin(), m_name.end(), m_name.begin(), ::tolower);
         }
@@ -567,7 +569,7 @@ namespace yhx
         /**
          * @brief 使用YAML::Node初始化配置模块
          */
-        // static void LoadFromYaml(const YAML::Node &root);
+        static void LoadFromYaml(const YAML::Node &root);
 
         /**
          * @brief 加载path文件夹里面的配置文件

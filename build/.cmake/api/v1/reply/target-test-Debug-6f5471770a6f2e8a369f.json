@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config"
+			"path" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test"
 		}
 	],
 	"backtrace" : 1,
@@ -27,25 +27,31 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 22,
+				"line" : 19,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 21,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
 				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -64,6 +70,10 @@
 				{
 					"backtrace" : 4,
 					"path" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/."
+				},
+				{
+					"backtrace" : 5,
+					"path" : "/home/yanhexi/Downloads/tool/yaml/yaml-cpp/include/yaml-cpp"
 				}
 			],
 			"language" : "CXX",
@@ -80,7 +90,7 @@
 			"id" : "yhx::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "test_config::@6890427a1f51a3e7e1df",
+	"id" : "test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -105,8 +115,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_config",
-	"nameOnDisk" : "test_config",
+	"name" : "test",
+	"nameOnDisk" : "test",
 	"paths" : 
 	{
 		"build" : ".",
@@ -127,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "tests/test_config.cc",
+			"path" : "tests/test.cc",
 			"sourceGroupIndex" : 0
 		}
 	],
