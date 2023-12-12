@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/lib/libyhx.pdb"
   "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/lib/libyhx.so"
+  "CMakeFiles/yhx.dir/yhx/config.cc.o"
+  "CMakeFiles/yhx.dir/yhx/config.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/log.cc.o"
   "CMakeFiles/yhx.dir/yhx/log.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/util.cc.o"

@@ -67,6 +67,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "strstream": "cpp",
-        "source_location": "cpp"
+        "source_location": "cpp",
+        "unordered_set": "cpp"
     }
 }
