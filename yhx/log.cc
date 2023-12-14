@@ -2,7 +2,7 @@
 #include <iostream>
 #include <functional>
 #include <ctime>
-// #include "config.h"
+#include "config.h"
 // #include "util.h"
 // #include "macro.h"
 // #include "env.h"
