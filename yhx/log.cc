@@ -3,7 +3,7 @@
 #include <functional>
 #include <ctime>
 #include "config.h"
-// #include "util.h"
+#include "util.h"
 // #include "macro.h"
 // #include "env.h"
 
