@@ -11,9 +11,9 @@
 #include <string>
 // #include <iomanip>
 // #include <json/json.h>
-// #include <yaml-cpp/yaml.h>
-// #include <iostream>
-// #include <boost/lexical_cast.hpp>
+#include <yaml-cpp/yaml.h>
+#include <iostream>
+#include <boost/lexical_cast.hpp>
 // #include <google/protobuf/message.h>
 // #include "yhx/util/hash_util.h"
 // #include "yhx/util/json_util.h"
