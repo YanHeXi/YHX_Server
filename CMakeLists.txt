@@ -6,6 +6,10 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O -g -std=c++11 -Wall -Wno-deprec
 
 include_directories(.)
 include_directories(/home/yanhexi/Downloads/tool/yaml/yaml-cpp/include/yaml-cpp)
+# link_directories((/home))
+
+find_library(YAMLCPP yaml-cpp)
+message("***",${YAMLCPP})
 
 set(LIB_SRC 
     yhx/log.cc 
@@ -16,11 +20,11 @@ add_library(yhx SHARED ${LIB_SRC})
 
 add_executable(test ../tests/test.cc)
 add_dependencies(test yhx)
-target_link_libraries(test yhx)
+target_link_libraries(test yhx ${YAMLCPP})
 
 add_executable(test_config ../tests/test_config.cc)
 add_dependencies(test_config yhx)
-target_link_libraries(test_config yhx yaml-cpp)
+target_link_libraries(test_config yhx ${YAMLCPP})
 
 set_target_properties(test_config test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set_target_properties(yhx PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

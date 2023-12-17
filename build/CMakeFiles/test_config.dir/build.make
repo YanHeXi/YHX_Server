@@ -96,6 +96,7 @@ test_config_EXTERNAL_OBJECTS =
 /home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/tests/test_config.cc.o
 /home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/build.make
 /home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config: /home/yanhexi/vscode_project/YHX_Server/YHX_Server/lib/libyhx.so
+/home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config: /usr/local/lib/libyaml-cpp.a
 /home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/yanhexi/vscode_project/YHX_Server/YHX_Server/bin/test_config"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_config.dir/link.txt --verbose=$(VERBOSE)
