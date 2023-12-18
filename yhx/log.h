@@ -338,7 +338,7 @@ namespace yhx
 
         Logger::ptr getLogger(const std::string &name);
 
-        // void init();
+        void init();
 
         Logger::ptr getRoot() const { return m_root; }
 

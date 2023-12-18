@@ -1,7 +1,7 @@
 CMakeFiles/yhx.dir/yhx/log.cc.o: \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/log.cc \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc \
  /usr/include/stdc-predef.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/log.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/log.h \
  /usr/include/c++/13.2.1/string \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -164,11 +164,11 @@ CMakeFiles/yhx.dir/yhx/log.cc.o: \
  /usr/include/c++/13.2.1/bits/stl_map.h \
  /usr/include/c++/13.2.1/bits/stl_multimap.h \
  /usr/include/c++/13.2.1/bits/erase_if.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/singleton.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h \
  /usr/include/c++/13.2.1/iostream /usr/include/c++/13.2.1/functional \
  /usr/include/c++/13.2.1/bits/std_function.h \
  /usr/include/c++/13.2.1/ctime \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/config.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -641,7 +641,7 @@ CMakeFiles/yhx.dir/yhx/log.cc.o: \
  /usr/local/include/yaml-cpp/node/emit.h \
  /usr/include/c++/13.2.1/unordered_set \
  /usr/include/c++/13.2.1/bits/unordered_set.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/util.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/util.h \
  /usr/include/c++/13.2.1/cxxabi.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
  /usr/include/sys/syscall.h /usr/include/asm/unistd.h \

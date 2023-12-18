@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/build"
+			"value" : "/home/yanhexi/vscode_project/YHX_Server/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -526,10 +526,6 @@
 			"properties" : 
 			[
 				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
 					"name" : "HELPSTRING",
 					"value" : "No help, variable specified on the command line."
 				}
@@ -559,7 +555,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -619,7 +615,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server"
+			"value" : "/home/yanhexi/vscode_project/YHX_Server"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1195,7 +1191,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/build"
+			"value" : "/home/yanhexi/vscode_project/YHX_Server/build"
 		},
 		{
 			"name" : "yhx_IS_TOP_LEVEL",
@@ -1219,7 +1215,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server"
+			"value" : "/home/yanhexi/vscode_project/YHX_Server"
 		}
 	],
 	"kind" : "cache",

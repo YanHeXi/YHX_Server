@@ -1,7 +1,7 @@
 CMakeFiles/yhx.dir/yhx/config.cc.o: \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/yhx/config.cc \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc \
  /usr/include/stdc-predef.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/./yhx/config.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/config.h \
  /usr/include/c++/13.2.1/memory /usr/include/c++/13.2.1/bits/memoryfwd.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -633,13 +633,13 @@ CMakeFiles/yhx.dir/yhx/config.cc.o: \
  /usr/local/include/yaml-cpp/node/emit.h \
  /usr/include/c++/13.2.1/unordered_set \
  /usr/include/c++/13.2.1/bits/unordered_set.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/./yhx/log.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/log.h \
  /usr/include/c++/13.2.1/fstream \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/13.2.1/bits/fstream.tcc \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/./yhx/singleton.h \
- /home/yanhexi/vscode_project/YHX_Server/YHX_Server/./yhx/util.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/singleton.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/util.h \
  /usr/include/c++/13.2.1/cxxabi.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
  /usr/include/sys/syscall.h /usr/include/asm/unistd.h \

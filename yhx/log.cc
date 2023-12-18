@@ -143,7 +143,7 @@ namespace yhx
                     LogLevel::Level level,
                     LogEvent::ptr event) override
         {
-            os << logger->getName();
+            os << event->getLogger()->getName();
         }
     };
 
@@ -712,7 +712,7 @@ namespace yhx
 
         m_loggers[m_root->m_name] = m_root;
 
-        // init();
+        init();
     }
 
     Logger::ptr LoggerManager::getLogger(const std::string &name)
@@ -730,41 +730,41 @@ namespace yhx
         return logger;
     }
 
-    // struct LogAppenderDefine
-    // {
-    //     int type = 0; // 1 File, 2 Stdout
-    //     LogLevel::Level level = LogLevel::UNKNOW;
-    //     std::string formatter;
-    //     std::string file;
+    struct LogAppenderDefine
+    {
+        int type = 0; // 1 File, 2 Stdout
+        yhx::LogLevel::Level level = LogLevel::Level::UNKNOW;
+        std::string formatter;
+        std::string file;
 
-    //     bool operator==(const LogAppenderDefine &oth) const
-    //     {
-    //         return type == oth.type && level == oth.level && formatter == oth.formatter && file == oth.file;
-    //     }
-    // };
+        bool operator==(const LogAppenderDefine &oth) const
+        {
+            return type == oth.type && level == oth.level && formatter == oth.formatter && file == oth.file;
+        }
+    };
 
-    // struct LogDefine
-    // {
-    //     std::string name;
-    //     LogLevel::Level level = LogLevel::UNKNOW;
-    //     std::string formatter;
-    //     std::vector<LogAppenderDefine> appenders;
+    struct LogDefine
+    {
+        std::string name;
+        yhx::LogLevel::Level level = LogLevel::Level::UNKNOW;
+        std::string formatter;
+        std::vector<LogAppenderDefine> appenders;
 
-    //     bool operator==(const LogDefine &oth) const
-    //     {
-    //         return name == oth.name && level == oth.level && formatter == oth.formatter && appenders == appenders;
-    //     }
+        bool operator==(const LogDefine &oth) const
+        {
+            return name == oth.name && level == oth.level && formatter == oth.formatter && appenders == appenders;
+        }
 
-    //     bool operator<(const LogDefine &oth) const
-    //     {
-    //         return name < oth.name;
-    //     }
+        bool operator<(const LogDefine &oth) const
+        {
+            return name < oth.name;
+        }
 
-    //     bool isValid() const
-    //     {
-    //         return !name.empty();
-    //     }
-    // };
+        bool isValid() const
+        {
+            return !name.empty();
+        }
+    };
 
     // template <>
     // class LexicalCast<std::string, LogDefine>
@@ -970,8 +970,8 @@ namespace yhx
     //     return ss.str();
     // }
 
-    // void LoggerManager::init()
-    // {
-    // }
+    void LoggerManager::init()
+    {
+    }
 
 }

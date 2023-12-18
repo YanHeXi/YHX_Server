@@ -43,7 +43,7 @@ namespace yhx
 
         virtual bool fromString(const std::string &val) = 0;
 
-        // virtual std::string getTypeName() const = 0;
+        virtual std::string getTypeName() const = 0;
 
     protected:
         /// 配置参数的名称
@@ -263,7 +263,6 @@ namespace yhx
             return vec;
         }
     };
-
     /**
      * @brief 类型转换模板类片特化(std::map<std::string, T> 转换成 YAML String)
      */
@@ -341,7 +340,7 @@ namespace yhx
     public:
         // using RWMutexType = RWMutex;
         using ptr = std::shared_ptr<ConfigVar>;
-        // using on_change_cb = std::function<void(const T &old_value, const T &new_value)>;
+        using on_change_cb = std::function<void(const T &old_value, const T &new_value)>;
 
         /**
          * @brief 通过参数名,参数值,描述构造ConfigVar
@@ -416,14 +415,14 @@ namespace yhx
         {
             // {
             //     // RWMutexType::ReadLock lock(m_mutex);
-            //     if (v == m_val)
-            //     {
-            //         return;
-            //     }
-            //     for (auto &i : m_cbs)
-            //     {
-            //         i.second(m_val, v);
-            //     }
+            if (v == m_val)
+            {
+                return;
+            }
+            for (auto &i : m_cbs)
+            {
+                i.second(m_val, v);
+            }
             // }
             // RWMutexType::WriteLock lock(m_mutex);
             m_val = v;
@@ -432,20 +431,24 @@ namespace yhx
         /**
          * @brief 返回参数值的类型名称(typeinfo)
          */
-        // std::string getTypeName() const override { return TypeToName<T>(); }
+        std::string getTypeName() const override
+        { /*return TypeToName<T>();*/
+            return typeid(T).name();
+        }
 
         /**
          * @brief 添加变化回调函数
          * @return 返回该回调函数对应的唯一id,用于删除回调
          */
-        // uint64_t addListener(on_change_cb cb)
-        // {
-        //     static uint64_t s_fun_id = 0;
-        //     // RWMutexType::WriteLock lock(m_mutex);
-        //     ++s_fun_id;
-        //     // m_cbs[s_fun_id] = cb;
-        //     return s_fun_id;
-        // }
+        void addListener(uint64_t key, on_change_cb cb)
+        {
+            // static uint64_t s_fun_id = 0;
+            // RWMutexType::WriteLock lock(m_mutex);
+            // ++s_fun_id;
+            // m_cbs[s_fun_id] = cb;
+            // return s_fun_id;
+            m_cbs[key] = cb;
+        }
 
         /**
          * @brief 删除回调函数
@@ -454,7 +457,7 @@ namespace yhx
         void delListener(uint64_t key)
         {
             // RWMutexType::WriteLock lock(m_mutex);
-            // m_cbs.erase(key);
+            m_cbs.erase(key);
         }
 
         /**
@@ -462,12 +465,12 @@ namespace yhx
          * @param[in] key 回调函数的唯一id
          * @return 如果存在返回对应的回调函数,否则返回nullptr
          */
-        // on_change_cb getListener(uint64_t key)
-        // {
-        //     // RWMutexType::ReadLock lock(m_mutex);
-        //     auto it = m_cbs.find(key);
-        //     return it == m_cbs.end() ? nullptr : it->second;
-        // }
+        on_change_cb getListener(uint64_t key)
+        {
+            // RWMutexType::ReadLock lock(m_mutex);
+            auto it = m_cbs.find(key);
+            return it == m_cbs.end() ? nullptr : it->second;
+        }
 
         /**
          * @brief 清理所有的回调函数
@@ -482,7 +485,7 @@ namespace yhx
         // RWMutexType m_mutex;
         T m_val;
         // 变更回调函数组, uint64_t key,要求唯一，一般可以用hash
-        // std::map<uint64_t, on_change_cb> m_cbs;
+        std::map<uint64_t, on_change_cb> m_cbs;
     };
 
     /**
@@ -520,13 +523,13 @@ namespace yhx
                     YHX_LOG_INFO(YHX_LOG_ROOT()) << "Lookup name=" << name << " exists";
                     return tmp;
                 }
-                // else
-                // {
-                //     YHX_LOG_ERROR(YHX_LOG_ROOT()) << "Lookup name=" << name << " exists but type not "
-                //                                   << " real_type=" << typeid(m_val).name()
-                //                                   << " " << it->second->toString();
-                //     return nullptr;
-                // }
+                else
+                {
+                    YHX_LOG_ERROR(YHX_LOG_ROOT()) << "Lookup name=" << name << " exists but type not "
+                                                  << " real_type=" << typeid(T).name()
+                                                  << " " << it->second->toString();
+                    return nullptr;
+                }
             }
 
             if (name.find_first_not_of("abcdefghikjlmnopqrstuvwxyz._0123456789") != std::string::npos)

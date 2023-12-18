@@ -43,21 +43,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-Debug-886b50c1f8c04ae9aa94.json",
+					"jsonFile" : "target-test-Debug-ea7d78590960a6a36913.json",
 					"name" : "test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test_config::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_config-Debug-a463bfe7b209d6281526.json",
+					"jsonFile" : "target-test_config-Debug-f70ca3580e0a9e869623.json",
 					"name" : "test_config",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "yhx::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-yhx-Debug-c005dc978cd961af1f70.json",
+					"jsonFile" : "target-yhx-Debug-051926b2b3d9dbe37ba4.json",
 					"name" : "yhx",
 					"projectIndex" : 0
 				}
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server/build",
-		"source" : "/home/yanhexi/vscode_project/YHX_Server/YHX_Server"
+		"build" : "/home/yanhexi/vscode_project/YHX_Server/build",
+		"source" : "/home/yanhexi/vscode_project/YHX_Server"
 	},
 	"version" : 
 	{

@@ -14,3 +14,21 @@ logs:
 system:
     port: 9900
     value: 15
+    int_vec: [10, 14]
+    int_list: [1, 2, 3]
+
+
+class:
+  person:
+    name: yhx
+    age: 27
+    sex: true
+  map:
+    jfjf:
+      name: 1
+      age: 2
+      sex: true
+    jajd:
+      name: 5
+      age: 55
+      sex: true
