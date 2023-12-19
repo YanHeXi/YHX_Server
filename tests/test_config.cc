@@ -217,38 +217,39 @@ void test_class()
     XX_PM(g_person_map, "class.map after");
     YHX_LOG_INFO(YHX_LOG_ROOT()) << "after: " << g_person_vec_map->toString();
 }
-// void test_log()
-// {
-//     static yhx::Logger::ptr system_log = YHX_LOG_NAME("system");
-//     YHX_LOG_INFO(system_log) << "hello system" << std::endl;
-//     std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-//     YAML::Node root = YAML::LoadFile("/home/yhx/workspace/yhx/bin/conf/log.yml");
-//     yhx::Config::LoadFromYaml(root);
-//     std::cout << "=============" << std::endl;
-//     std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-//     std::cout << "=============" << std::endl;
-//     std::cout << root << std::endl;
-//     YHX_LOG_INFO(system_log) << "hello system" << std::endl;
+void test_log()
+{
+    // static yhx::Logger::ptr system_log = YHX_LOG_NAME("system");
+    // YHX_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
 
-//     system_log->setFormatter("%d - %m%n");
-//     YHX_LOG_INFO(system_log) << "hello system" << std::endl;
-// }
+    YAML::Node root = YAML::LoadFile("/home/yanhexi/vscode_project/YHX_Server/bin/conf/test.yml");
+    yhx::Config::LoadFromYaml(root);
 
-// void test_loadconf()
-// {
-//     yhx::Config::LoadFromConfDir("conf");
-// }
+    std::cout << "=============" << std::endl;
+    std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
+    // std::cout << "=============" << std::endl;
+    // std::cout << root << std::endl;
+    // YHX_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    // system_log->setFormatter("%d - %m%n");
+    // YHX_LOG_INFO(system_log) << "hello system" << std::endl;
+}
+
+void test_loadconf()
+{
+    yhx::Config::LoadFromConfDir("conf");
+}
 
 int main(int argc, char **argv)
 {
 
     // YHX_LOG_INFO(YHX_LOG_ROOT()) << g_int_value_config->getValue();
     // YHX_LOG_INFO(YHX_LOG_ROOT()) << g_float_value_config->toString();
-
     // test_yaml();
     // test_config();
-    test_class();
-    // test_log();
+    // test_class();
+    test_log();
     // yhx::EnvMgr::GetInstance()->init(argc, argv);
     // test_loadconf();
     // std::cout << " ==== " << std::endl;

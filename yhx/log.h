@@ -103,7 +103,7 @@ namespace yhx
     public:
         enum class Level
         {
-            UNKNOW = 0,
+            UNKNOWN = 0,
             DEBUG = 1,
             INFO = 2,
             WARN = 3,
@@ -232,7 +232,7 @@ namespace yhx
         virtual ~LogAppender() {}
 
         virtual void log(std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event) = 0;
-        // virtual std::string toYamlString() = 0;
+        virtual std::string toYamlString() = 0;
         void setFormatter(LogFormatter::ptr val);
 
         LogFormatter::ptr getFormatter();
@@ -288,7 +288,7 @@ namespace yhx
 
         LogFormatter::ptr getFormatter();
 
-        // std::string toYamlString();
+        std::string toYamlString();
 
     private:
         std::string m_name;
@@ -306,7 +306,7 @@ namespace yhx
         void log(Logger::ptr logger,
                  LogLevel::Level level,
                  LogEvent::ptr event) override;
-        // std::string toYamlString() override;
+        std::string toYamlString() override;
     };
 
     class FileLogAppender : public LogAppender
@@ -319,7 +319,7 @@ namespace yhx
                  LogLevel::Level level,
                  LogEvent::ptr event) override;
 
-        // std::string toYamlString() override;
+        std::string toYamlString() override;
 
         bool reopen();
 
@@ -342,7 +342,7 @@ namespace yhx
 
         Logger::ptr getRoot() const { return m_root; }
 
-        // std::string toYamlString();
+        std::string toYamlString();
 
     private:
         // MutexType m_mutex;
