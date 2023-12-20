@@ -219,7 +219,7 @@ void test_class()
 }
 void test_log()
 {
-    // static yhx::Logger::ptr system_log = YHX_LOG_NAME("system");
+    static yhx::Logger::ptr system_log = YHX_LOG_NAME("system");
     // YHX_LOG_INFO(system_log) << "hello system" << std::endl;
     std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
 
@@ -228,9 +228,9 @@ void test_log()
 
     std::cout << "=============" << std::endl;
     std::cout << yhx::LoggerMgr::GetInstance()->toYamlString() << std::endl;
-    // std::cout << "=============" << std::endl;
-    // std::cout << root << std::endl;
-    // YHX_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << "=============" << std::endl;
+    std::cout << root << std::endl;
+    YHX_LOG_INFO(system_log) << "hello system" << std::endl;
 
     // system_log->setFormatter("%d - %m%n");
     // YHX_LOG_INFO(system_log) << "hello system" << std::endl;

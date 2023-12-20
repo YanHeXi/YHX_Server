@@ -76,43 +76,43 @@ CMakeFiles/yhx.dir/yhx/log.cc.o: CMakeFiles/yhx.dir/flags.make
 CMakeFiles/yhx.dir/yhx/log.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc
 CMakeFiles/yhx.dir/yhx/log.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yhx.dir/yhx/log.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/log.cc.o -MF CMakeFiles/yhx.dir/yhx/log.cc.o.d -o CMakeFiles/yhx.dir/yhx/log.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/log.cc.o -MF CMakeFiles/yhx.dir/yhx/log.cc.o.d -o CMakeFiles/yhx.dir/yhx/log.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc
 
 CMakeFiles/yhx.dir/yhx/log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/log.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc > CMakeFiles/yhx.dir/yhx/log.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc > CMakeFiles/yhx.dir/yhx/log.cc.i
 
 CMakeFiles/yhx.dir/yhx/log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/log.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc -o CMakeFiles/yhx.dir/yhx/log.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/log.cc -o CMakeFiles/yhx.dir/yhx/log.cc.s
 
 CMakeFiles/yhx.dir/yhx/util.cc.o: CMakeFiles/yhx.dir/flags.make
 CMakeFiles/yhx.dir/yhx/util.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc
 CMakeFiles/yhx.dir/yhx/util.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yhx.dir/yhx/util.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/util.cc.o -MF CMakeFiles/yhx.dir/yhx/util.cc.o.d -o CMakeFiles/yhx.dir/yhx/util.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/util.cc.o -MF CMakeFiles/yhx.dir/yhx/util.cc.o.d -o CMakeFiles/yhx.dir/yhx/util.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc
 
 CMakeFiles/yhx.dir/yhx/util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/util.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc > CMakeFiles/yhx.dir/yhx/util.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc > CMakeFiles/yhx.dir/yhx/util.cc.i
 
 CMakeFiles/yhx.dir/yhx/util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/util.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc -o CMakeFiles/yhx.dir/yhx/util.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/util.cc -o CMakeFiles/yhx.dir/yhx/util.cc.s
 
 CMakeFiles/yhx.dir/yhx/config.cc.o: CMakeFiles/yhx.dir/flags.make
 CMakeFiles/yhx.dir/yhx/config.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc
 CMakeFiles/yhx.dir/yhx/config.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/yhx.dir/yhx/config.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/config.cc.o -MF CMakeFiles/yhx.dir/yhx/config.cc.o.d -o CMakeFiles/yhx.dir/yhx/config.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/config.cc.o -MF CMakeFiles/yhx.dir/yhx/config.cc.o.d -o CMakeFiles/yhx.dir/yhx/config.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc
 
 CMakeFiles/yhx.dir/yhx/config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/config.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc > CMakeFiles/yhx.dir/yhx/config.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc > CMakeFiles/yhx.dir/yhx/config.cc.i
 
 CMakeFiles/yhx.dir/yhx/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/config.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc -o CMakeFiles/yhx.dir/yhx/config.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc -o CMakeFiles/yhx.dir/yhx/config.cc.s
 
 # Object files for target yhx
 yhx_OBJECTS = \
