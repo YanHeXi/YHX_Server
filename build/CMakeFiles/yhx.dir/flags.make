@@ -14,3 +14,7 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/config.cc.o_DEFINES = __FILE__="yhx/config.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/thread.cc.o_DEFINES = __FILE__="yhx/thread.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/mutex.cc.o_DEFINES = __FILE__="yhx/mutex.cc"
+

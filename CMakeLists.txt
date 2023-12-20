@@ -9,27 +9,41 @@ include_directories(.)
 include_directories(/home/yanhexi/Downloads/tool)
 link_directories(/home/yanhexi/vscode_project/YHX_Server/lib)
 
-find_library(YAMLCPP yaml-cpp)
-message("***",${YAMLCPP})
+
+# message("***",${YAMLCPP})
 
 set(LIB_SRC 
     yhx/log.cc 
     yhx/util.cc
-    yhx/config.cc)
+    yhx/config.cc
+    yhx/thread.cc
+    yhx/mutex.cc)
 
 add_library(yhx SHARED ${LIB_SRC})
+
 force_redefine_file_macro_for_sources(yhx)
+find_library(YAMLCPP yaml-cpp)
+find_library(PTHREAD pthread)
+
+set(LIBS
+    yhx
+    pthread
+    yaml-cpp)
 
 add_executable(test ../tests/test.cc)
 add_dependencies(test yhx)
 force_redefine_file_macro_for_sources(test)
-target_link_libraries(test yhx ${YAMLCPP})
+target_link_libraries(test ${LIBS})
 
 add_executable(test_config ../tests/test_config.cc)
 add_dependencies(test_config yhx)
-force_redefine_file_macro_for_sources(test)
+force_redefine_file_macro_for_sources(test_config)
+target_link_libraries(test_config ${LIBS})
 
-target_link_libraries(test_config yhx ${YAMLCPP})
+add_executable(test_thread ../tests/test_thread.cc)
+add_dependencies(test_thread yhx)
+force_redefine_file_macro_for_sources(test_thread)
+target_link_libraries(test_thread ${LIBS})
 
-set_target_properties(test_config test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
-set_target_properties(yhx PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

@@ -158,6 +158,19 @@ test_config/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
 .PHONY : test_config/fast
 
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -205,6 +218,30 @@ tests/test_config.s: tests/test_config.cc.s
 tests/test_config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
+
+tests/test_thread.o: tests/test_thread.cc.o
+.PHONY : tests/test_thread.o
+
+# target to build an object file
+tests/test_thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.o
+.PHONY : tests/test_thread.cc.o
+
+tests/test_thread.i: tests/test_thread.cc.i
+.PHONY : tests/test_thread.i
+
+# target to preprocess a source file
+tests/test_thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.i
+.PHONY : tests/test_thread.cc.i
+
+tests/test_thread.s: tests/test_thread.cc.s
+.PHONY : tests/test_thread.s
+
+# target to generate assembly for a file
+tests/test_thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
+.PHONY : tests/test_thread.cc.s
 
 yhx/config.o: yhx/config.cc.o
 .PHONY : yhx/config.o
@@ -254,6 +291,54 @@ yhx/log.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/log.cc.s
 .PHONY : yhx/log.cc.s
 
+yhx/mutex.o: yhx/mutex.cc.o
+.PHONY : yhx/mutex.o
+
+# target to build an object file
+yhx/mutex.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/mutex.cc.o
+.PHONY : yhx/mutex.cc.o
+
+yhx/mutex.i: yhx/mutex.cc.i
+.PHONY : yhx/mutex.i
+
+# target to preprocess a source file
+yhx/mutex.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/mutex.cc.i
+.PHONY : yhx/mutex.cc.i
+
+yhx/mutex.s: yhx/mutex.cc.s
+.PHONY : yhx/mutex.s
+
+# target to generate assembly for a file
+yhx/mutex.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/mutex.cc.s
+.PHONY : yhx/mutex.cc.s
+
+yhx/thread.o: yhx/thread.cc.o
+.PHONY : yhx/thread.o
+
+# target to build an object file
+yhx/thread.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/thread.cc.o
+.PHONY : yhx/thread.cc.o
+
+yhx/thread.i: yhx/thread.cc.i
+.PHONY : yhx/thread.i
+
+# target to preprocess a source file
+yhx/thread.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/thread.cc.i
+.PHONY : yhx/thread.cc.i
+
+yhx/thread.s: yhx/thread.cc.s
+.PHONY : yhx/thread.s
+
+# target to generate assembly for a file
+yhx/thread.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/thread.cc.s
+.PHONY : yhx/thread.cc.s
+
 yhx/util.o: yhx/util.cc.o
 .PHONY : yhx/util.o
 
@@ -288,6 +373,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test_config"
+	@echo "... test_thread"
 	@echo "... yhx"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
@@ -295,12 +381,21 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_thread.o"
+	@echo "... tests/test_thread.i"
+	@echo "... tests/test_thread.s"
 	@echo "... yhx/config.o"
 	@echo "... yhx/config.i"
 	@echo "... yhx/config.s"
 	@echo "... yhx/log.o"
 	@echo "... yhx/log.i"
 	@echo "... yhx/log.s"
+	@echo "... yhx/mutex.o"
+	@echo "... yhx/mutex.i"
+	@echo "... yhx/mutex.s"
+	@echo "... yhx/thread.o"
+	@echo "... yhx/thread.i"
+	@echo "... yhx/thread.s"
 	@echo "... yhx/util.o"
 	@echo "... yhx/util.i"
 	@echo "... yhx/util.s"

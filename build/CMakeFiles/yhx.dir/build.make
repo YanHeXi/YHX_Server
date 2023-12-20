@@ -114,25 +114,57 @@ CMakeFiles/yhx.dir/yhx/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/config.cc.s"
 	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/config.cc -o CMakeFiles/yhx.dir/yhx/config.cc.s
 
+CMakeFiles/yhx.dir/yhx/thread.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/thread.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/thread.cc
+CMakeFiles/yhx.dir/yhx/thread.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yhx.dir/yhx/thread.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/thread.cc.o -MF CMakeFiles/yhx.dir/yhx/thread.cc.o.d -o CMakeFiles/yhx.dir/yhx/thread.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/thread.cc
+
+CMakeFiles/yhx.dir/yhx/thread.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/thread.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/thread.cc > CMakeFiles/yhx.dir/yhx/thread.cc.i
+
+CMakeFiles/yhx.dir/yhx/thread.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/thread.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/thread.cc -o CMakeFiles/yhx.dir/yhx/thread.cc.s
+
+CMakeFiles/yhx.dir/yhx/mutex.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/mutex.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.cc
+CMakeFiles/yhx.dir/yhx/mutex.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/yhx.dir/yhx/mutex.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/mutex.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/mutex.cc.o -MF CMakeFiles/yhx.dir/yhx/mutex.cc.o.d -o CMakeFiles/yhx.dir/yhx/mutex.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.cc
+
+CMakeFiles/yhx.dir/yhx/mutex.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/mutex.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/mutex.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.cc > CMakeFiles/yhx.dir/yhx/mutex.cc.i
+
+CMakeFiles/yhx.dir/yhx/mutex.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/mutex.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/mutex.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.cc -o CMakeFiles/yhx.dir/yhx/mutex.cc.s
+
 # Object files for target yhx
 yhx_OBJECTS = \
 "CMakeFiles/yhx.dir/yhx/log.cc.o" \
 "CMakeFiles/yhx.dir/yhx/util.cc.o" \
-"CMakeFiles/yhx.dir/yhx/config.cc.o"
+"CMakeFiles/yhx.dir/yhx/config.cc.o" \
+"CMakeFiles/yhx.dir/yhx/thread.cc.o" \
+"CMakeFiles/yhx.dir/yhx/mutex.cc.o"
 
 # External object files for target yhx
 yhx_EXTERNAL_OBJECTS =
 
-/home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so: CMakeFiles/yhx.dir/yhx/log.cc.o
-/home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so: CMakeFiles/yhx.dir/yhx/util.cc.o
-/home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so: CMakeFiles/yhx.dir/yhx/config.cc.o
-/home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so: CMakeFiles/yhx.dir/build.make
-/home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so: CMakeFiles/yhx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so"
+libyhx.so: CMakeFiles/yhx.dir/yhx/log.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/util.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/config.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/thread.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/mutex.cc.o
+libyhx.so: CMakeFiles/yhx.dir/build.make
+libyhx.so: CMakeFiles/yhx.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libyhx.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yhx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/yhx.dir/build: /home/yanhexi/vscode_project/YHX_Server/lib/libyhx.so
+CMakeFiles/yhx.dir/build: libyhx.so
 .PHONY : CMakeFiles/yhx.dir/build
 
 CMakeFiles/yhx.dir/clean:
