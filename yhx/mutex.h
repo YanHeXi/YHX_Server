@@ -297,7 +297,6 @@ namespace yhx
         void unlock() { pthread_spin_unlock(&m_mutex); }
 
     private:
-        /// 自旋锁
         pthread_spinlock_t m_mutex;
     };
 

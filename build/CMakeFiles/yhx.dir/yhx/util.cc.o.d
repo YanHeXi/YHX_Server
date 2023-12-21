@@ -654,4 +654,12 @@ CMakeFiles/yhx.dir/yhx/util.cc.o: \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/13.2.1/bits/fstream.tcc \
- /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h
+ /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/thread.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h \
+ /usr/include/c++/13.2.1/thread /usr/include/c++/13.2.1/bits/std_thread.h \
+ /usr/include/c++/13.2.1/bits/this_thread_sleep.h \
+ /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
+ /usr/include/c++/13.2.1/bits/parse_numbers.h /usr/include/semaphore.h \
+ /usr/include/bits/semaphore.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/noncopyable.h

@@ -204,7 +204,7 @@ void test_class()
         YHX_LOG_INFO(YHX_LOG_ROOT()) << prefix << ": size=" << m.size();                               \
     }
 
-    g_person->addListener(10, [](const Person &old_value, const Person &new_value)
+    g_person->addListener([](const Person &old_value, const Person &new_value)
                           { YHX_LOG_INFO(YHX_LOG_ROOT()) << "old_value=" << old_value.toString()
                                                          << " new_value=" << new_value.toString(); });
 
@@ -256,11 +256,11 @@ int main(int argc, char **argv)
     // sleep(10);
     // test_loadconf();
     // return 0;
-    // yhx::Config::Visit([](yhx::ConfigVarBase::ptr var)
-    //                    { YHX_LOG_INFO(YHX_LOG_ROOT()) << "name=" << var->getName()
-    //                                                   << " description=" << var->getDescription()
-    //                                                   << " typename=" << var->getTypeName()
-    //                                                   << " value=" << var->toString(); });
+    yhx::Config::Visit([](yhx::ConfigVarBase::ptr var)
+                       { YHX_LOG_INFO(YHX_LOG_ROOT()) << "name=" << var->getName()
+                                                      << " description=" << var->getDescription()
+                                                      << " typename=" << var->getTypeName()
+                                                      << " value=" << var->toString(); });
 
     return 0;
 }

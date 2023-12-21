@@ -8,9 +8,9 @@
 #include <vector>
 #include <stdarg.h>
 #include <map>
-// #include "util.h"
+#include "util.h"
 #include "singleton.h"
-// #include "thread.h"
+#include "thread.h"
 
 /**
  * @brief 使用流式方式将日志级别level的日志写入到logger
@@ -131,7 +131,11 @@ namespace yhx
             uint64_t time);
         // const std::string &thread_name
 
-        const char *getFile() const { return m_file; }
+        const char *
+        getFile() const
+        {
+            return m_file;
+        }
 
         int32_t getLine() const { return m_line; }
 
@@ -227,7 +231,7 @@ namespace yhx
 
     public:
         using ptr = std::shared_ptr<LogAppender>;
-        // using ptr = Spinlock MutexType;
+        using MutexType = Spinlock;
 
         virtual ~LogAppender() {}
 
@@ -244,7 +248,7 @@ namespace yhx
     protected:
         LogLevel::Level m_level = LogLevel::Level::DEBUG;
         bool m_hasFormatter = false;
-        // MutexType m_mutex;
+        MutexType m_mutex;
         LogFormatter::ptr m_formatter;
     };
 
@@ -254,7 +258,7 @@ namespace yhx
 
     public:
         using ptr = std::shared_ptr<Logger>;
-        // using ptr = Spinlock MutexType;
+        using MutexType = Spinlock;
 
         Logger(const std::string &name = "root");
 
@@ -293,7 +297,7 @@ namespace yhx
     private:
         std::string m_name;
         LogLevel::Level m_level;
-        // MutexType m_mutex;
+        MutexType m_mutex;
         std::list<LogAppender::ptr> m_appenders;
         LogFormatter::ptr m_formatter;
         Logger::ptr m_root;
@@ -332,7 +336,7 @@ namespace yhx
     class LoggerManager
     {
     public:
-        // using ptr = Spinlock MutexType;
+        using MutexType = Spinlock;
 
         LoggerManager();
 
@@ -345,7 +349,7 @@ namespace yhx
         std::string toYamlString();
 
     private:
-        // MutexType m_mutex;
+        MutexType m_mutex;
         std::map<std::string, Logger::ptr> m_loggers;
         Logger::ptr m_root;
     };

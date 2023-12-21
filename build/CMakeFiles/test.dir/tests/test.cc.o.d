@@ -164,7 +164,6 @@ CMakeFiles/test.dir/tests/test.cc.o: \
  /usr/include/c++/13.2.1/bits/stl_map.h \
  /usr/include/c++/13.2.1/bits/stl_multimap.h \
  /usr/include/c++/13.2.1/bits/erase_if.h \
- /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/singleton.h \
  /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/util.h \
  /usr/include/c++/13.2.1/cxxabi.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
@@ -638,4 +637,13 @@ CMakeFiles/test.dir/tests/test.cc.o: \
  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
  /usr/include/boost/core/cmath.hpp /usr/include/boost/integer.hpp \
  /usr/include/boost/integer_fwd.hpp \
- /usr/include/boost/detail/basic_pointerbuf.hpp
+ /usr/include/boost/detail/basic_pointerbuf.hpp \
+ /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/singleton.h \
+ /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/thread.h \
+ /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/mutex.h \
+ /usr/include/c++/13.2.1/thread /usr/include/c++/13.2.1/bits/std_thread.h \
+ /usr/include/c++/13.2.1/bits/this_thread_sleep.h \
+ /usr/include/c++/13.2.1/bits/chrono.h /usr/include/c++/13.2.1/ratio \
+ /usr/include/c++/13.2.1/bits/parse_numbers.h /usr/include/semaphore.h \
+ /usr/include/bits/semaphore.h \
+ /home/yanhexi/vscode_project/YHX_Server/tests/../yhx/noncopyable.h

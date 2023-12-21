@@ -24,7 +24,8 @@ void fun1()
 
 void fun2()
 {
-    while (true)
+    int i = 1000;
+    while (i--)
     {
         YHX_LOG_INFO(g_logger) << "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
     }
@@ -32,7 +33,8 @@ void fun2()
 
 void fun3()
 {
-    while (true)
+    int i = 1000;
+    while (i--)
     {
         YHX_LOG_INFO(g_logger) << "========================================";
     }
@@ -41,16 +43,16 @@ void fun3()
 int main(int argc, char **argv)
 {
     YHX_LOG_INFO(g_logger) << "thread test begin";
-    // YAML::Node root = YAML::LoadFile("/home/yanhexi/vscode_project/YHX_Server/bin/conf/test.yml");
-    // yhx::Config::LoadFromYaml(root);
+    YAML::Node root = YAML::LoadFile("/home/yanhexi/vscode_project/YHX_Server/bin/conf/log2.yml");
+    yhx::Config::LoadFromYaml(root);
 
     std::vector<yhx::Thread::ptr> thrs;
     for (int i = 0; i < 5; ++i)
     {
-        yhx::Thread::ptr thr(new yhx::Thread(&fun1, "name_" + std::to_string(i * 2)));
-        // yhx::Thread::ptr thr2(new yhx::Thread(&fun3, "name_" + std::to_string(i * 2 + 1)));
+        yhx::Thread::ptr thr(new yhx::Thread(&fun2, "name_" + std::to_string(i * 2)));
+        yhx::Thread::ptr thr2(new yhx::Thread(&fun3, "name_" + std::to_string(i * 2 + 1)));
         thrs.push_back(thr);
-        // thrs.push_back(thr2);
+        thrs.push_back(thr2);
     }
     for (size_t i = 0; i < thrs.size(); ++i)
     {

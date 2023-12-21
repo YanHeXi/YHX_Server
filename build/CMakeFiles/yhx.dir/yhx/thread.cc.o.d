@@ -174,7 +174,6 @@ CMakeFiles/yhx.dir/yhx/thread.cc.o: \
  /usr/include/c++/13.2.1/bits/stl_map.h \
  /usr/include/c++/13.2.1/bits/stl_multimap.h \
  /usr/include/c++/13.2.1/bits/erase_if.h \
- /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h \
  /home/yanhexi/vscode_project/YHX_Server/yhx/util.h \
  /usr/include/c++/13.2.1/cxxabi.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
@@ -643,4 +642,5 @@ CMakeFiles/yhx.dir/yhx/thread.cc.o: \
  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
  /usr/include/boost/core/cmath.hpp /usr/include/boost/integer.hpp \
  /usr/include/boost/integer_fwd.hpp \
- /usr/include/boost/detail/basic_pointerbuf.hpp
+ /usr/include/boost/detail/basic_pointerbuf.hpp \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h

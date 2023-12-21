@@ -13,7 +13,7 @@
 #include <unordered_set>
 #include <functional>
 
-// #include "thread.h"
+#include "thread.h"
 #include "log.h"
 #include "util.h"
 
@@ -338,7 +338,7 @@ namespace yhx
     class ConfigVar : public ConfigVarBase
     {
     public:
-        // using RWMutexType = RWMutex;
+        using RWMutexType = RWMutex;
         using ptr = std::shared_ptr<ConfigVar>;
         using on_change_cb = std::function<void(const T &old_value, const T &new_value)>;
 
@@ -365,7 +365,7 @@ namespace yhx
             try
             {
                 // return boost::lexical_cast<std::string>(m_val);
-                // RWMutexType::ReadLock lock(m_mutex);
+                RWMutexType::ReadLock lock(m_mutex);
                 return ToStr()(m_val);
             }
             catch (std::exception &e)
@@ -403,7 +403,7 @@ namespace yhx
          */
         const T getValue()
         {
-            // RWMutexType::ReadLock lock(m_mutex);
+            RWMutexType::ReadLock lock(m_mutex);
             return m_val;
         }
 
@@ -413,18 +413,18 @@ namespace yhx
          */
         void setValue(const T &v)
         {
-            // {
-            //     // RWMutexType::ReadLock lock(m_mutex);
-            if (v == m_val)
             {
-                return;
+                RWMutexType::ReadLock lock(m_mutex);
+                if (v == m_val)
+                {
+                    return;
+                }
+                for (auto &i : m_cbs)
+                {
+                    i.second(m_val, v);
+                }
             }
-            for (auto &i : m_cbs)
-            {
-                i.second(m_val, v);
-            }
-            // }
-            // RWMutexType::WriteLock lock(m_mutex);
+            RWMutexType::WriteLock lock(m_mutex);
             m_val = v;
         }
 
@@ -440,14 +440,14 @@ namespace yhx
          * @brief 添加变化回调函数
          * @return 返回该回调函数对应的唯一id,用于删除回调
          */
-        void addListener(uint64_t key, on_change_cb cb)
+        uint64_t addListener(on_change_cb cb)
         {
-            // static uint64_t s_fun_id = 0;
-            // RWMutexType::WriteLock lock(m_mutex);
-            // ++s_fun_id;
-            // m_cbs[s_fun_id] = cb;
-            // return s_fun_id;
-            m_cbs[key] = cb;
+            static uint64_t s_fun_id = 0;
+            RWMutexType::WriteLock lock(m_mutex);
+            ++s_fun_id;
+            m_cbs[s_fun_id] = cb;
+            return s_fun_id;
+            // m_cbs[key] = cb;
         }
 
         /**
@@ -456,7 +456,7 @@ namespace yhx
          */
         void delListener(uint64_t key)
         {
-            // RWMutexType::WriteLock lock(m_mutex);
+            RWMutexType::WriteLock lock(m_mutex);
             m_cbs.erase(key);
         }
 
@@ -467,7 +467,7 @@ namespace yhx
          */
         on_change_cb getListener(uint64_t key)
         {
-            // RWMutexType::ReadLock lock(m_mutex);
+            RWMutexType::ReadLock lock(m_mutex);
             auto it = m_cbs.find(key);
             return it == m_cbs.end() ? nullptr : it->second;
         }
@@ -477,12 +477,12 @@ namespace yhx
          */
         void clearListener()
         {
-            // RWMutexType::WriteLock lock(m_mutex);
+            RWMutexType::WriteLock lock(m_mutex);
             // m_cbs.clear();
         }
 
     private:
-        // RWMutexType m_mutex;
+        RWMutexType m_mutex;
         T m_val;
         // 变更回调函数组, uint64_t key,要求唯一，一般可以用hash
         std::map<uint64_t, on_change_cb> m_cbs;
@@ -496,7 +496,7 @@ namespace yhx
     {
     public:
         using ConfigVarMap = std::unordered_map<std::string, ConfigVarBase::ptr>;
-        // using RWMutexType = RWMutex;
+        using RWMutexType = RWMutex;
 
         /**
          * @brief 获取/创建对应参数名的配置参数
@@ -513,7 +513,7 @@ namespace yhx
                                                  const T &default_value,
                                                  const std::string &description = "")
         {
-            // RWMutexType::WriteLock lock(GetMutex());
+            RWMutexType::WriteLock lock(GetMutex());
             auto it = GetDatas().find(name);
             if (it != GetDatas().end())
             {
@@ -551,7 +551,7 @@ namespace yhx
         template <class T>
         static typename ConfigVar<T>::ptr Lookup(const std::string &name)
         {
-            // RWMutexType::ReadLock lock(GetMutex());
+            RWMutexType::ReadLock lock(GetMutex());
             auto it = GetDatas().find(name);
             if (it == GetDatas().end())
             {
@@ -595,11 +595,11 @@ namespace yhx
         /**
          * @brief 配置项的RWMutex
          */
-        // static RWMutexType &GetMutex()
-        // {
-        //     static RWMutexType s_mutex;
-        //     return s_mutex;
-        // }
+        static RWMutexType &GetMutex()
+        {
+            static RWMutexType s_mutex;
+            return s_mutex;
+        }
     };
 
 }

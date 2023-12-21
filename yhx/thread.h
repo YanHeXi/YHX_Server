@@ -55,7 +55,7 @@ namespace yhx
         /// 线程名称
         std::string m_name;
         /// 信号量
-        // Semaphore m_semaphore;
+        Semaphore m_semaphore;
     };
 
 }

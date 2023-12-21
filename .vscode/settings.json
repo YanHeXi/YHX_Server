@@ -70,6 +70,7 @@
         "source_location": "cpp",
         "unordered_set": "cpp",
         "set": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "forward_list": "cpp"
     }
 }
