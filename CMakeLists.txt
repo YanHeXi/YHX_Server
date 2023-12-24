@@ -17,7 +17,8 @@ set(LIB_SRC
     yhx/util.cc
     yhx/config.cc
     yhx/thread.cc
-    yhx/mutex.cc)
+    yhx/mutex.cc
+    yhx/util.cc)
 
 add_library(yhx SHARED ${LIB_SRC})
 
@@ -44,6 +45,11 @@ add_executable(test_thread ../tests/test_thread.cc)
 add_dependencies(test_thread yhx)
 force_redefine_file_macro_for_sources(test_thread)
 target_link_libraries(test_thread ${LIBS})
+
+add_executable(test_util ../tests/test_util.cc)
+add_dependencies(test_util yhx)
+force_redefine_file_macro_for_sources(test_util)
+target_link_libraries(test_util ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

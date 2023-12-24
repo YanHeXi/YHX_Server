@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/yanhexi/vscode_project/YHX_Server/tests/test.cc" "CMakeFiles/test.dir/tests/test.cc.o" "gcc" "CMakeFiles/test.dir/tests/test.cc.o.d"
+  "/home/yanhexi/vscode_project/workplace/YHX_Server/tests/test.cc" "CMakeFiles/test.dir/tests/test.cc.o" "gcc" "CMakeFiles/test.dir/tests/test.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

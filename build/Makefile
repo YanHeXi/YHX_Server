@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yanhexi/vscode_project/YHX_Server
+CMAKE_SOURCE_DIR = /home/yanhexi/vscode_project/workplace/YHX_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yanhexi/vscode_project/YHX_Server/build
+CMAKE_BINARY_DIR = /home/yanhexi/vscode_project/workplace/YHX_Server/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles /home/yanhexi/vscode_project/YHX_Server/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/workplace/YHX_Server/build/CMakeFiles /home/yanhexi/vscode_project/workplace/YHX_Server/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/workplace/YHX_Server/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -171,6 +171,19 @@ test_thread/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
 .PHONY : test_thread/fast
 
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -242,6 +255,30 @@ tests/test_thread.s: tests/test_thread.cc.s
 tests/test_thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
 .PHONY : tests/test_thread.cc.s
+
+tests/test_util.o: tests/test_util.cc.o
+.PHONY : tests/test_util.o
+
+# target to build an object file
+tests/test_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.o
+.PHONY : tests/test_util.cc.o
+
+tests/test_util.i: tests/test_util.cc.i
+.PHONY : tests/test_util.i
+
+# target to preprocess a source file
+tests/test_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.i
+.PHONY : tests/test_util.cc.i
+
+tests/test_util.s: tests/test_util.cc.s
+.PHONY : tests/test_util.s
+
+# target to generate assembly for a file
+tests/test_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.s
+.PHONY : tests/test_util.cc.s
 
 yhx/config.o: yhx/config.cc.o
 .PHONY : yhx/config.o
@@ -374,6 +411,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_thread"
+	@echo "... test_util"
 	@echo "... yhx"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
@@ -384,6 +422,9 @@ help:
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_util.o"
+	@echo "... tests/test_util.i"
+	@echo "... tests/test_util.s"
 	@echo "... yhx/config.o"
 	@echo "... yhx/config.i"
 	@echo "... yhx/config.s"
