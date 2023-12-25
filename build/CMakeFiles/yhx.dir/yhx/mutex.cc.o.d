@@ -1,7 +1,7 @@
 CMakeFiles/yhx.dir/yhx/mutex.cc.o: \
- /home/yanhexi/vscode_project/workplace/YHX_Server/yhx/mutex.cc \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.cc \
  /usr/include/stdc-predef.h \
- /home/yanhexi/vscode_project/workplace/YHX_Server/yhx/mutex.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h \
  /usr/include/c++/13.2.1/thread \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -140,5 +140,5 @@ CMakeFiles/yhx.dir/yhx/mutex.cc.o: \
  /usr/include/bits/stdio_lim.h /usr/include/bits/stdio.h \
  /usr/include/c++/13.2.1/bits/charconv.h \
  /usr/include/c++/13.2.1/bits/basic_string.tcc \
- /home/yanhexi/vscode_project/workplace/YHX_Server/yhx/noncopyable.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/noncopyable.h \
  /usr/include/c++/13.2.1/stdexcept

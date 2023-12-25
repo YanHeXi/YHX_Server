@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test"
-  "/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test.pdb"
+  "/home/yanhexi/vscode_project/YHX_Server/bin/test"
+  "/home/yanhexi/vscode_project/YHX_Server/bin/test.pdb"
   "CMakeFiles/test.dir/tests/test.cc.o"
   "CMakeFiles/test.dir/tests/test.cc.o.d"
 )

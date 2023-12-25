@@ -11,7 +11,7 @@
 // #include <google/protobuf/unknown_field_set.h>
 
 #include "log.h"
-// #include "fiber.h"
+#include "fiber.h"
 
 namespace yhx
 {
@@ -25,8 +25,8 @@ namespace yhx
 
     uint32_t GetFiberId()
     {
-        return 0;
-        // return yhx::Fiber::GetFiberId();
+        // return 0;
+        return yhx::Fiber::GetFiberId();
     }
 
     static std::string demangle(const char *str)

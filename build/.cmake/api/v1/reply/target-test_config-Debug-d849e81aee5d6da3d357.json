@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config"
+			"path" : "/home/yanhexi/vscode_project/YHX_Server/bin/test_config"
 		}
 	],
 	"backtrace" : 1,
@@ -31,7 +31,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 39,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
@@ -43,13 +43,13 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 42,
+				"line" : 43,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 40,
+				"line" : 41,
 				"parent" : 0
 			},
 			{
@@ -67,7 +67,7 @@
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 41,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
@@ -91,14 +91,14 @@
 			[
 				{
 					"backtrace" : 8,
-					"define" : "__FILE__=\"/home/yanhexi/vscode_project/workplace/tests/test_config.cc\""
+					"define" : "__FILE__=\"/home/yanhexi/vscode_project/tests/test_config.cc\""
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 5,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 6,
@@ -138,7 +138,7 @@
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/yanhexi/vscode_project/workplace/YHX_Server/build:/home/yanhexi/vscode_project/YHX_Server/lib",
+				"fragment" : "-Wl,-rpath,/home/yanhexi/vscode_project/YHX_Server/build:/home/yanhexi/vscode_project/YHX_Server/lib",
 				"role" : "libraries"
 			},
 			{

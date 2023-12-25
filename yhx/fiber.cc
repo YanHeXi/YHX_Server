@@ -15,7 +15,7 @@ namespace yhx
     static std::atomic<uint64_t> s_fiber_count{0};
 
     static thread_local Fiber *t_fiber = nullptr;
-    static thread_local Fiber::ptr t_threadFiber = nullptr;
+    static thread_local std::shared_ptr<Fiber::ptr> t_threadFiber = nullptr;
 
     static ConfigVar<uint32_t>::ptr g_fiber_stack_size =
         Config::Lookup<uint32_t>("fiber.stack_size", 128 * 1024, "fiber stack size");
@@ -135,7 +135,7 @@ namespace yhx
     {
         SetThis(this);
         m_state = EXEC;
-        if (swapcontext(&t_threadFiber->m_ctx, &m_ctx))
+        if (swapcontext(&(*t_threadFiber)->m_ctx, &m_ctx))
         {
             YHX_ASSERT2(false, "swapcontext");
         }
@@ -143,8 +143,8 @@ namespace yhx
 
     void Fiber::back()
     {
-        SetThis(t_threadFiber.get());
-        if (swapcontext(&m_ctx, &t_threadFiber->m_ctx))
+        SetThis((*t_threadFiber).get());
+        if (swapcontext(&m_ctx, &(*t_threadFiber)->m_ctx))
         {
             YHX_ASSERT2(false, "swapcontext");
         }
@@ -156,7 +156,9 @@ namespace yhx
         SetThis(this);
         YHX_ASSERT(m_state != EXEC);
         m_state = EXEC;
-        if (swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx))
+
+        // if (swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx))
+        if (swapcontext(&(*t_threadFiber)->m_ctx, &m_ctx))
         {
             YHX_ASSERT2(false, "swapcontext");
         }
@@ -165,8 +167,10 @@ namespace yhx
     // 切换到后台执行
     void Fiber::swapOut()
     {
-        SetThis(Scheduler::GetMainFiber());
-        if (swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx))
+        // SetThis(Scheduler::GetMainFiber());
+        SetThis((*t_threadFiber).get());
+        // if (swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx))
+        if (swapcontext(&m_ctx, &(*t_threadFiber)->m_ctx))
         {
             YHX_ASSERT2(false, "swapcontext");
         }
@@ -187,7 +191,8 @@ namespace yhx
         }
         Fiber::ptr main_fiber(new Fiber);
         YHX_ASSERT(t_fiber == main_fiber.get());
-        t_threadFiber = main_fiber;
+        // t_threadFiber = main_fiber;
+        t_threadFiber.reset(new Fiber::ptr(main_fiber));
         return t_fiber->shared_from_this();
     }
 
@@ -205,7 +210,7 @@ namespace yhx
     {
         Fiber::ptr cur = GetThis();
         YHX_ASSERT(cur->m_state == EXEC);
-        // cur->m_state = HOLD;
+        cur->m_state = HOLD;
         cur->swapOut();
     }
 

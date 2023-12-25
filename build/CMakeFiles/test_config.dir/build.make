@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yanhexi/vscode_project/workplace/YHX_Server
+CMAKE_SOURCE_DIR = /home/yanhexi/vscode_project/YHX_Server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yanhexi/vscode_project/workplace/YHX_Server/build
+CMAKE_BINARY_DIR = /home/yanhexi/vscode_project/YHX_Server/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test_config.dir/depend.make
@@ -73,18 +73,18 @@ include CMakeFiles/test_config.dir/progress.make
 include CMakeFiles/test_config.dir/flags.make
 
 CMakeFiles/test_config.dir/tests/test_config.cc.o: CMakeFiles/test_config.dir/flags.make
-CMakeFiles/test_config.dir/tests/test_config.cc.o: /home/yanhexi/vscode_project/workplace/YHX_Server/tests/test_config.cc
+CMakeFiles/test_config.dir/tests/test_config.cc.o: /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc
 CMakeFiles/test_config.dir/tests/test_config.cc.o: CMakeFiles/test_config.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/workplace/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_config.dir/tests/test_config.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/workplace/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_config.dir/tests/test_config.cc.o -MF CMakeFiles/test_config.dir/tests/test_config.cc.o.d -o CMakeFiles/test_config.dir/tests/test_config.cc.o -c /home/yanhexi/vscode_project/workplace/YHX_Server/tests/test_config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_config.dir/tests/test_config.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_config.dir/tests/test_config.cc.o -MF CMakeFiles/test_config.dir/tests/test_config.cc.o.d -o CMakeFiles/test_config.dir/tests/test_config.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc
 
 CMakeFiles/test_config.dir/tests/test_config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_config.dir/tests/test_config.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/workplace/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/workplace/YHX_Server/tests/test_config.cc > CMakeFiles/test_config.dir/tests/test_config.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc > CMakeFiles/test_config.dir/tests/test_config.cc.i
 
 CMakeFiles/test_config.dir/tests/test_config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_config.dir/tests/test_config.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/workplace/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/workplace/YHX_Server/tests/test_config.cc -o CMakeFiles/test_config.dir/tests/test_config.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc -o CMakeFiles/test_config.dir/tests/test_config.cc.s
 
 # Object files for target test_config
 test_config_OBJECTS = \
@@ -93,15 +93,15 @@ test_config_OBJECTS = \
 # External object files for target test_config
 test_config_EXTERNAL_OBJECTS =
 
-/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/tests/test_config.cc.o
-/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/build.make
-/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config: libyhx.so
-/home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/workplace/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config"
+/home/yanhexi/vscode_project/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/tests/test_config.cc.o
+/home/yanhexi/vscode_project/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/build.make
+/home/yanhexi/vscode_project/YHX_Server/bin/test_config: libyhx.so
+/home/yanhexi/vscode_project/YHX_Server/bin/test_config: CMakeFiles/test_config.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/yanhexi/vscode_project/YHX_Server/bin/test_config"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_config.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/test_config.dir/build: /home/yanhexi/vscode_project/workplace/YHX_Server/bin/test_config
+CMakeFiles/test_config.dir/build: /home/yanhexi/vscode_project/YHX_Server/bin/test_config
 .PHONY : CMakeFiles/test_config.dir/build
 
 CMakeFiles/test_config.dir/clean:
@@ -109,6 +109,6 @@ CMakeFiles/test_config.dir/clean:
 .PHONY : CMakeFiles/test_config.dir/clean
 
 CMakeFiles/test_config.dir/depend:
-	cd /home/yanhexi/vscode_project/workplace/YHX_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanhexi/vscode_project/workplace/YHX_Server /home/yanhexi/vscode_project/workplace/YHX_Server /home/yanhexi/vscode_project/workplace/YHX_Server/build /home/yanhexi/vscode_project/workplace/YHX_Server/build /home/yanhexi/vscode_project/workplace/YHX_Server/build/CMakeFiles/test_config.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/yanhexi/vscode_project/YHX_Server/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yanhexi/vscode_project/YHX_Server /home/yanhexi/vscode_project/YHX_Server /home/yanhexi/vscode_project/YHX_Server/build /home/yanhexi/vscode_project/YHX_Server/build /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles/test_config.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/test_config.dir/depend
 

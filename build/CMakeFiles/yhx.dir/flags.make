@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -Dyhx_EXPORTS
 
-CXX_INCLUDES = -I/home/yanhexi/vscode_project/workplace/YHX_Server/. -I/home/yanhexi/Downloads/tool
+CXX_INCLUDES = -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool
 
 CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC
 
@@ -17,4 +17,6 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 # Custom defines: CMakeFiles/yhx.dir/yhx/thread.cc.o_DEFINES = __FILE__="yhx/thread.cc"
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/mutex.cc.o_DEFINES = __FILE__="yhx/mutex.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/fiber.cc.o_DEFINES = __FILE__="yhx/fiber.cc"
 

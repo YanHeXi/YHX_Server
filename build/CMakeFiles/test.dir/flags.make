@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/yanhexi/vscode_project/workplace/YHX_Server/. -I/home/yanhexi/Downloads/tool
+CXX_INCLUDES = -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool
 
 CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g
 
-# Custom defines: CMakeFiles/test.dir/tests/test.cc.o_DEFINES = __FILE__="/home/yanhexi/vscode_project/workplace/tests/test.cc"
+# Custom defines: CMakeFiles/test.dir/tests/test.cc.o_DEFINES = __FILE__="/home/yanhexi/vscode_project/tests/test.cc"
 

@@ -17,7 +17,7 @@ namespace yhx
         friend class Scheduler;
 
     public:
-        typedef std::shared_ptr<Fiber> ptr;
+        using ptr = std::shared_ptr<Fiber>;
 
         /**
          * @brief 协程状态

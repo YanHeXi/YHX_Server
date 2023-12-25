@@ -29,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
@@ -53,8 +53,14 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 25,
+				"line" : 26,
 				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 12,
+				"parent" : 5
 			},
 			{
 				"command" : 3,
@@ -111,7 +117,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 4,
@@ -145,7 +151,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 4,
@@ -179,7 +185,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 4,
@@ -213,7 +219,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 4,
@@ -247,7 +253,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/yanhexi/vscode_project/workplace/YHX_Server/."
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
 				},
 				{
 					"backtrace" : 4,
@@ -258,6 +264,40 @@
 			"sourceIndexes" : 
 			[
 				4
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 11,
+					"define" : "__FILE__=\"yhx/fiber.cc\""
+				},
+				{
+					"define" : "yhx_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/yanhexi/Downloads/tool"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				5
 			]
 		}
 	],
@@ -295,7 +335,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -329,6 +370,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 4,
 			"path" : "yhx/mutex.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 5,
+			"path" : "yhx/fiber.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

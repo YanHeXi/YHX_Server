@@ -15,11 +15,11 @@
 /**
  * @brief 使用流式方式将日志级别level的日志写入到logger
  */
-#define YHX_LOG_LEVEL(logger, level)                                                                  \
-    if (logger->getLevel() <= level)                                                                  \
-    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                             \
-                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(), \
-                                                           yhx::GetFiberId(), time(0))))              \
+#define YHX_LOG_LEVEL(logger, level)                                                                             \
+    if (logger->getLevel() <= level)                                                                             \
+    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                                        \
+                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(),            \
+                                                           yhx::GetFiberId(), time(0), yhx::Thread::GetName()))) \
         .getSS()
 
 /**
@@ -50,12 +50,12 @@
 /**
  * @brief 使用格式化方式将日志级别level的日志写入到logger
  */
-#define YHX_LOG_FMT_LEVEL(logger, level, fmt, ...)                                                    \
-    if (logger->getLevel() <= level)                                                                  \
-    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                             \
-                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(), \
-                                                           yhx::GetFiberId(), time(0))))              \
-        .getEvent()                                                                                   \
+#define YHX_LOG_FMT_LEVEL(logger, level, fmt, ...)                                                               \
+    if (logger->getLevel() <= level)                                                                             \
+    yhx::LogEventWrap(yhx::LogEvent::ptr(new yhx::LogEvent(logger, level,                                        \
+                                                           __FILE__, __LINE__, 0, yhx::GetThreadId(),            \
+                                                           yhx::GetFiberId(), time(0), yhx::Thread::GetName()))) \
+        .getEvent()                                                                                              \
         ->format(fmt, __VA_ARGS__)
 
 /**
@@ -128,14 +128,10 @@ namespace yhx
             uint32_t elapse,
             uint32_t thread_id,
             uint32_t fiber_id,
-            uint64_t time);
-        // const std::string &thread_name
+            uint64_t time,
+            const std::string &thread_name);
 
-        const char *
-        getFile() const
-        {
-            return m_file;
-        }
+        const char *getFile() const { return m_file; }
 
         int32_t getLine() const { return m_line; }
 
