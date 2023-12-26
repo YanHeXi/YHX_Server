@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/yhx.dir/yhx/log.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/mutex.cc.o"
   "CMakeFiles/yhx.dir/yhx/mutex.cc.o.d"
+  "CMakeFiles/yhx.dir/yhx/scheduler.cc.o"
+  "CMakeFiles/yhx.dir/yhx/scheduler.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/thread.cc.o"
   "CMakeFiles/yhx.dir/yhx/thread.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/util.cc.o"

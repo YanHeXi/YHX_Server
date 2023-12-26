@@ -413,6 +413,30 @@ yhx/mutex.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/mutex.cc.s
 .PHONY : yhx/mutex.cc.s
 
+yhx/scheduler.o: yhx/scheduler.cc.o
+.PHONY : yhx/scheduler.o
+
+# target to build an object file
+yhx/scheduler.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/scheduler.cc.o
+.PHONY : yhx/scheduler.cc.o
+
+yhx/scheduler.i: yhx/scheduler.cc.i
+.PHONY : yhx/scheduler.i
+
+# target to preprocess a source file
+yhx/scheduler.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/scheduler.cc.i
+.PHONY : yhx/scheduler.cc.i
+
+yhx/scheduler.s: yhx/scheduler.cc.s
+.PHONY : yhx/scheduler.s
+
+# target to generate assembly for a file
+yhx/scheduler.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/scheduler.cc.s
+.PHONY : yhx/scheduler.cc.s
+
 yhx/thread.o: yhx/thread.cc.o
 .PHONY : yhx/thread.o
 
@@ -502,6 +526,9 @@ help:
 	@echo "... yhx/mutex.o"
 	@echo "... yhx/mutex.i"
 	@echo "... yhx/mutex.s"
+	@echo "... yhx/scheduler.o"
+	@echo "... yhx/scheduler.i"
+	@echo "... yhx/scheduler.s"
 	@echo "... yhx/thread.o"
 	@echo "... yhx/thread.i"
 	@echo "... yhx/thread.s"

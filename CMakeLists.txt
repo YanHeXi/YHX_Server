@@ -19,7 +19,8 @@ set(LIB_SRC
     yhx/thread.cc
     yhx/mutex.cc
     yhx/util.cc
-    yhx/fiber.cc)
+    yhx/fiber.cc
+    yhx/scheduler.cc)
 
 add_library(yhx SHARED ${LIB_SRC})
 

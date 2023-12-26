@@ -20,3 +20,5 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/fiber.cc.o_DEFINES = __FILE__="yhx/fiber.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/scheduler.cc.o_DEFINES = __FILE__="yhx/scheduler.cc"
+
