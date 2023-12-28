@@ -656,4 +656,5 @@ CMakeFiles/yhx.dir/yhx/fiber.cc.o: \
  /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
  /usr/include/c++/13.2.1/iostream \
  /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h \
- /home/yanhexi/vscode_project/YHX_Server/yhx/macro.h
+ /home/yanhexi/vscode_project/YHX_Server/yhx/macro.h \
+ /home/yanhexi/vscode_project/YHX_Server/yhx/scheduler.h

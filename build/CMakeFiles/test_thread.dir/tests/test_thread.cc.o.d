@@ -657,4 +657,5 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: \
  /home/yanhexi/vscode_project/YHX_Server/./yhx/singleton.h \
  /home/yanhexi/vscode_project/YHX_Server/./yhx/fiber.h \
  /usr/include/ucontext.h /usr/include/bits/indirect-return.h \
- /usr/include/sys/ucontext.h /usr/include/bits/types/stack_t.h
+ /usr/include/sys/ucontext.h /usr/include/bits/types/stack_t.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/scheduler.h

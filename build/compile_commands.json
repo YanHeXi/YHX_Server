@@ -43,32 +43,38 @@
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
-  "command": "/usr/bin/g++  -D__FILE__=\\\"/home/yanhexi/vscode_project/tests/test.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/tests/test.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test.cc",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/tests/test.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test.cc",
   "output": "CMakeFiles/test.dir/tests/test.cc.o"
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
-  "command": "/usr/bin/g++  -D__FILE__=\\\"/home/yanhexi/vscode_project/tests/test_config.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_config.dir/tests/test_config.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test_config.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_config.dir/tests/test_config.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test_config.cc",
   "output": "CMakeFiles/test_config.dir/tests/test_config.cc.o"
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
-  "command": "/usr/bin/g++  -D__FILE__=\\\"/home/yanhexi/vscode_project/tests/test_thread.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_thread.dir/tests/test_thread.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_thread.cc",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test_thread.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_thread.dir/tests/test_thread.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_thread.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test_thread.cc",
   "output": "CMakeFiles/test_thread.dir/tests/test_thread.cc.o"
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
-  "command": "/usr/bin/g++  -D__FILE__=\\\"/home/yanhexi/vscode_project/tests/test_util.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_util.dir/tests/test_util.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_util.cc",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test_util.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_util.dir/tests/test_util.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_util.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test_util.cc",
   "output": "CMakeFiles/test_util.dir/tests/test_util.cc.o"
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
-  "command": "/usr/bin/g++  -D__FILE__=\\\"/home/yanhexi/vscode_project/tests/test_fiber.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test_fiber.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc",
   "output": "CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o"
+},
+{
+  "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
+  "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test_scheduler.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_scheduler.cc",
+  "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test_scheduler.cc",
+  "output": "CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o"
 }
 ]

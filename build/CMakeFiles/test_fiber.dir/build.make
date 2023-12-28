@@ -76,15 +76,15 @@ CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o: CMakeFiles/test_fiber.dir/flags
 CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o: /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc
 CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o: CMakeFiles/test_fiber.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -MF CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o.d -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -MF CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o.d -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc
 
 CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc > CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc > CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
 
 CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"/home/yanhexi/vscode_project/tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_fiber.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_fiber.cc -o CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 
 # Object files for target test_fiber
 test_fiber_OBJECTS = \

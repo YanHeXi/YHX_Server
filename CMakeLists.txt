@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 project(yhx)
 
 include (cmake/utils.cmake)
@@ -36,6 +36,7 @@ set(LIBS
 add_executable(test ../tests/test.cc)
 add_dependencies(test yhx)
 force_redefine_file_macro_for_sources(test)
+
 target_link_libraries(test ${LIBS})
 
 add_executable(test_config ../tests/test_config.cc)
@@ -57,6 +58,11 @@ add_executable(test_fiber ../tests/test_fiber.cc)
 add_dependencies(test_fiber yhx)
 force_redefine_file_macro_for_sources(test_fiber)
 target_link_libraries(test_fiber ${LIBS})
+
+add_executable(test_scheduler ../tests/test_scheduler.cc)
+add_dependencies(test_scheduler yhx)
+force_redefine_file_macro_for_sources(test_scheduler)
+target_link_libraries(test_scheduler ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

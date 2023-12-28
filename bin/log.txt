@@ -1,0 +1,3 @@
+2023-12-28 17:30:11	6009	UNKNOW	0	[INFO]	[root]	/home/yanhexi/vscode_project/tests/test.cc:21	test macro
+2023-12-28 17:30:11	6009	UNKNOW	0	[ERROR]	[root]	/home/yanhexi/vscode_project/tests/test.cc:22	test macro error
+2023-12-28 17:30:11	6009	UNKNOW	0	[ERROR]	[root]	/home/yanhexi/vscode_project/tests/test.cc:24	test macro fmt error aa

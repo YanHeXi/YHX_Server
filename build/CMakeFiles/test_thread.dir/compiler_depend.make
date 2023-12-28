@@ -7,6 +7,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
   /home/yanhexi/vscode_project/YHX_Server/yhx/log.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/noncopyable.h \
+  /home/yanhexi/vscode_project/YHX_Server/yhx/scheduler.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/singleton.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/thread.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/util.h \
@@ -862,8 +863,6 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 
 /usr/include/c++/13.2.1/streambuf:
 
-/usr/include/c++/13.2.1/stdexcept:
-
 /usr/include/c++/13.2.1/set:
 
 /usr/include/c++/13.2.1/ratio:
@@ -1071,10 +1070,6 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/linux/errno.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
-
-/usr/include/bits/types/locale_t.h:
-
-/usr/include/boost/range/detail/sfinae.hpp:
 
 /usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
@@ -1288,6 +1283,10 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 
 /usr/include/boost/config/user.hpp:
 
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/boost/type_traits/is_void.hpp:
+
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
 
 /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
@@ -1342,15 +1341,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 
 /usr/include/boost/preprocessor/arithmetic/sub.hpp:
 
-/usr/include/sys/ucontext.h:
-
-/usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
-
-/usr/include/boost/mpl/aux_/config/intel.hpp:
-
 /usr/include/bits/posix1_lim.h:
-
-/home/yanhexi/vscode_project/YHX_Server/tests/test_thread.cc:
 
 /usr/include/boost/core/snprintf.hpp:
 
@@ -1448,37 +1439,9 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 
 /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
 
-/usr/include/c++/13.2.1/clocale:
-
-/usr/include/bits/fp-logb.h:
-
-/usr/include/asm-generic/errno-base.h:
-
 /usr/include/boost/mpl/arg.hpp:
 
 /usr/include/bits/cpu-set.h:
-
-/usr/include/boost/mpl/aux_/config/msvc.hpp:
-
-/usr/include/boost/range/value_type.hpp:
-
-/usr/include/boost/move/detail/std_ns_end.hpp:
-
-/usr/include/c++/13.2.1/bits/stl_pair.h:
-
-/usr/include/boost/preprocessor/seq/elem.hpp:
-
-/home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h:
-
-/usr/include/boost/mpl/bool_fwd.hpp:
-
-/usr/include/c++/13.2.1/bits/valarray_array.h:
-
-/usr/include/boost/mpl/aux_/config/nttp.hpp:
-
-/usr/include/boost/range/config.hpp:
-
-/usr/include/bits/typesizes.h:
 
 /usr/include/boost/container/container_fwd.hpp:
 
@@ -1491,6 +1454,40 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/bits/wchar.h:
+
+/home/yanhexi/vscode_project/YHX_Server/tests/test_thread.cc:
+
+/usr/include/boost/mpl/aux_/config/msvc.hpp:
+
+/usr/include/boost/range/value_type.hpp:
+
+/usr/include/boost/move/detail/std_ns_end.hpp:
+
+/usr/include/c++/13.2.1/bits/stl_pair.h:
+
+/usr/include/boost/preprocessor/seq/elem.hpp:
+
+/usr/include/bits/typesizes.h:
+
+/home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h:
+
+/usr/include/boost/mpl/bool_fwd.hpp:
+
+/usr/include/c++/13.2.1/bits/valarray_array.h:
+
+/usr/include/boost/mpl/aux_/config/nttp.hpp:
+
+/usr/include/boost/range/config.hpp:
+
+/usr/include/asm-generic/errno-base.h:
+
+/usr/include/c++/13.2.1/stdexcept:
+
+/home/yanhexi/vscode_project/YHX_Server/yhx/scheduler.h:
+
+/usr/include/boost/assert.hpp:
+
+/usr/include/c++/13.2.1/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/13.2.1/cstdint:
 
@@ -1513,6 +1510,10 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/bits/confname.h:
 
 /usr/include/boost/type_traits/make_void.hpp:
+
+/usr/include/c++/13.2.1/clocale:
+
+/usr/include/bits/fp-logb.h:
 
 /usr/include/boost/preprocessor/logical/bool.hpp:
 
@@ -1617,6 +1618,16 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/boost/move/detail/std_ns_begin.hpp:
 
 /usr/include/bits/mathcalls.h:
+
+/usr/include/bits/types/locale_t.h:
+
+/usr/include/sys/ucontext.h:
+
+/usr/include/boost/mpl/aux_/config/intel.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
+
+/usr/include/boost/range/detail/sfinae.hpp:
 
 /usr/include/bits/types/mbstate_t.h:
 
@@ -1733,10 +1744,6 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
 /usr/include/boost/type_traits/is_class.hpp:
-
-/usr/include/boost/config/stdlib/libstdcpp3.hpp:
-
-/usr/include/boost/type_traits/is_void.hpp:
 
 /usr/include/boost/mpl/aux_/static_cast.hpp:
 
@@ -2146,11 +2153,11 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 
 /usr/include/boost/type_traits/conversion_traits.hpp:
 
+/usr/include/c++/13.2.1/bits/fstream.tcc:
+
 /usr/include/c++/13.2.1/bits/exception.h:
 
 /usr/include/bits/time.h:
-
-/usr/include/c++/13.2.1/bits/fstream.tcc:
 
 /usr/include/boost/type_traits/declval.hpp:
 
@@ -2281,10 +2288,6 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: /home/yanhexi/vscode_project/
 /usr/include/c++/13.2.1/bits/codecvt.h:
 
 /usr/include/c++/13.2.1/bits/cpp_type_traits.h:
-
-/usr/include/boost/assert.hpp:
-
-/usr/include/c++/13.2.1/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/13.2.1/bits/erase_if.h:
 

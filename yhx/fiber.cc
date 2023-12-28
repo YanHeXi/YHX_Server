@@ -2,7 +2,7 @@
 #include "config.h"
 #include "macro.h"
 #include "log.h"
-// #include "scheduler.h"
+#include "scheduler.h"
 
 #include <atomic>
 
@@ -157,8 +157,7 @@ namespace yhx
         YHX_ASSERT(m_state != EXEC);
         m_state = EXEC;
 
-        // if (swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx))
-        if (swapcontext(&(*t_threadFiber)->m_ctx, &m_ctx))
+        if (swapcontext(&Scheduler::GetMainFiber()->m_ctx, &m_ctx))
         {
             YHX_ASSERT2(false, "swapcontext");
         }
@@ -167,13 +166,12 @@ namespace yhx
     // 切换到后台执行
     void Fiber::swapOut()
     {
-        // SetThis(Scheduler::GetMainFiber());
-        SetThis((*t_threadFiber).get());
-        // if (swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx))
-        if (swapcontext(&m_ctx, &(*t_threadFiber)->m_ctx))
-        {
-            YHX_ASSERT2(false, "swapcontext");
-        }
+        SetThis(Scheduler::GetMainFiber());
+        if (swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx))
+            if (swapcontext(&m_ctx, &(*t_threadFiber)->m_ctx))
+            {
+                YHX_ASSERT2(false, "swapcontext");
+            }
     }
 
     // 设置当前协程

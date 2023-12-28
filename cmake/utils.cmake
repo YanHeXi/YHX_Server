@@ -13,7 +13,7 @@ function(force_redefine_file_macro_for_sources targetname)
             PROPERTY COMPILE_DEFINITIONS)
         # Get the relative path of the source file in project directory
         get_filename_component(filepath "${sourcefile}" ABSOLUTE)
-        string(REPLACE ${PROJECT_SOURCE_DIR}/ "" relpath ${filepath})
+        string(REPLACE ${PROJECT_SOURCE_DIR}/ "" relpath ${sourcefile})
         list(APPEND defs "__FILE__=\"${relpath}\"")
         # Set the updated compile definitions on the source file.
         set_property(

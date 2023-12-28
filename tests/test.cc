@@ -23,7 +23,7 @@ int main(int atgs, char **argv)
 
     YHX_LOG_FMT_ERROR(logger, "test macro fmt error %s", "aa");
 
-    auto l = yhx::LoggerMgr::GetInstance()->getLogger("xx");
+    auto l = yhx::LoggerMgr::GetInstance()->getLogger("system");
     YHX_LOG_DEBUG(l) << "xxx";
 
     return 0;
