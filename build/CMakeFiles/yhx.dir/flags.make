@@ -22,3 +22,7 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/scheduler.cc.o_DEFINES = __FILE__="yhx/scheduler.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/iomanager.cc.o_DEFINES = __FILE__="yhx/iomanager.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/timer.cc.o_DEFINES = __FILE__="yhx/timer.cc"
+

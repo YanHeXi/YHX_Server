@@ -402,6 +402,30 @@ yhx/fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/fiber.cc.s
 .PHONY : yhx/fiber.cc.s
 
+yhx/iomanager.o: yhx/iomanager.cc.o
+.PHONY : yhx/iomanager.o
+
+# target to build an object file
+yhx/iomanager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/iomanager.cc.o
+.PHONY : yhx/iomanager.cc.o
+
+yhx/iomanager.i: yhx/iomanager.cc.i
+.PHONY : yhx/iomanager.i
+
+# target to preprocess a source file
+yhx/iomanager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/iomanager.cc.i
+.PHONY : yhx/iomanager.cc.i
+
+yhx/iomanager.s: yhx/iomanager.cc.s
+.PHONY : yhx/iomanager.s
+
+# target to generate assembly for a file
+yhx/iomanager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/iomanager.cc.s
+.PHONY : yhx/iomanager.cc.s
+
 yhx/log.o: yhx/log.cc.o
 .PHONY : yhx/log.o
 
@@ -498,6 +522,30 @@ yhx/thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/thread.cc.s
 .PHONY : yhx/thread.cc.s
 
+yhx/timer.o: yhx/timer.cc.o
+.PHONY : yhx/timer.o
+
+# target to build an object file
+yhx/timer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/timer.cc.o
+.PHONY : yhx/timer.cc.o
+
+yhx/timer.i: yhx/timer.cc.i
+.PHONY : yhx/timer.i
+
+# target to preprocess a source file
+yhx/timer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/timer.cc.i
+.PHONY : yhx/timer.cc.i
+
+yhx/timer.s: yhx/timer.cc.s
+.PHONY : yhx/timer.s
+
+# target to generate assembly for a file
+yhx/timer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/timer.cc.s
+.PHONY : yhx/timer.cc.s
+
 yhx/util.o: yhx/util.cc.o
 .PHONY : yhx/util.o
 
@@ -561,6 +609,9 @@ help:
 	@echo "... yhx/fiber.o"
 	@echo "... yhx/fiber.i"
 	@echo "... yhx/fiber.s"
+	@echo "... yhx/iomanager.o"
+	@echo "... yhx/iomanager.i"
+	@echo "... yhx/iomanager.s"
 	@echo "... yhx/log.o"
 	@echo "... yhx/log.i"
 	@echo "... yhx/log.s"
@@ -573,6 +624,9 @@ help:
 	@echo "... yhx/thread.o"
 	@echo "... yhx/thread.i"
 	@echo "... yhx/thread.s"
+	@echo "... yhx/timer.o"
+	@echo "... yhx/timer.i"
+	@echo "... yhx/timer.s"
 	@echo "... yhx/util.o"
 	@echo "... yhx/util.i"
 	@echo "... yhx/util.s"

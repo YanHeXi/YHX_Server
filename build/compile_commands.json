@@ -43,6 +43,18 @@
 },
 {
   "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
+  "command": "/usr/bin/g++ -Dyhx_EXPORTS -D__FILE__=\\\"yhx/iomanager.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/yhx.dir/yhx/iomanager.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/iomanager.cc",
+  "file": "/home/yanhexi/vscode_project/YHX_Server/yhx/iomanager.cc",
+  "output": "CMakeFiles/yhx.dir/yhx/iomanager.cc.o"
+},
+{
+  "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
+  "command": "/usr/bin/g++ -Dyhx_EXPORTS -D__FILE__=\\\"yhx/timer.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/yhx.dir/yhx/timer.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/timer.cc",
+  "file": "/home/yanhexi/vscode_project/YHX_Server/yhx/timer.cc",
+  "output": "CMakeFiles/yhx.dir/yhx/timer.cc.o"
+},
+{
+  "directory": "/home/yanhexi/vscode_project/YHX_Server/build",
   "command": "/usr/bin/g++  -D__FILE__=\\\"../tests/test.cc\\\" -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/tests/test.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test.cc",
   "file": "/home/yanhexi/vscode_project/YHX_Server/tests/test.cc",
   "output": "CMakeFiles/test.dir/tests/test.cc.o"
