@@ -66,5 +66,10 @@ add_dependencies(test_scheduler yhx)
 force_redefine_file_macro_for_sources(test_scheduler)
 target_link_libraries(test_scheduler ${LIBS})
 
+add_executable(test_iomanager ../tests/test_iomanager.cc)
+add_dependencies(test_iomanager yhx)
+force_redefine_file_macro_for_sources(test_iomanager)
+target_link_libraries(test_iomanager ${LIBS})
+
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
