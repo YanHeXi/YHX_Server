@@ -89,18 +89,43 @@ namespace yhx
         return ss.str();
     }
 
+    // uint64_t GetCurrentMS()
+    // {
+    //     struct timeval tv;
+    //     gettimeofday(&tv, NULL);
+    //     return tv.tv_sec * 1000ul + tv.tv_usec / 1000;
+    // }
+
+    // uint64_t GetCurrentUS()
+    // {
+    //     struct timeval tv;
+    //     gettimeofday(&tv, NULL);
+    //     return tv.tv_sec * 1000 * 1000ul + tv.tv_usec;
+    // }
     uint64_t GetCurrentMS()
     {
         struct timeval tv;
-        gettimeofday(&tv, NULL);
-        return tv.tv_sec * 1000ul + tv.tv_usec / 1000;
+        // gettimeofday(&tv, NULL);
+        timespec ts;
+        tv.tv_sec = 0;
+        tv.tv_usec = 0;
+        ts.tv_sec = tv.tv_sec;
+        ts.tv_nsec = tv.tv_usec * 1000;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &ts);
+        return ts.tv_sec * 1000ul + ts.tv_nsec / 1000000ul;
     }
 
     uint64_t GetCurrentUS()
     {
         struct timeval tv;
         gettimeofday(&tv, NULL);
-        return tv.tv_sec * 1000 * 1000ul + tv.tv_usec;
+        timespec ts;
+        tv.tv_sec = 0;
+        tv.tv_usec = 0;
+        ts.tv_sec = tv.tv_sec;
+        ts.tv_nsec = tv.tv_usec * 1000;
+        clock_gettime(CLOCK_MONOTONIC_RAW, &ts);
+        return ts.tv_sec * 1000 * 1000ul + ts.tv_nsec / 1000ul;
     }
 
     std::string Time2Str(time_t ts, const std::string &format)

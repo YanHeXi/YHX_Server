@@ -18,7 +18,7 @@ namespace yhx
 
     public:
         /// 定时器的智能指针类型
-        typedef std::shared_ptr<Timer> ptr;
+        using ptr = std::shared_ptr<Timer>;
 
         /**
          * @brief 取消定时器
@@ -89,7 +89,7 @@ namespace yhx
 
     public:
         /// 读写锁类型
-        typedef RWMutex RWMutexType;
+        using RWMutexType = RWMutex;
 
         /**
          * @brief 构造函数
