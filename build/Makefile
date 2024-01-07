@@ -211,17 +211,17 @@ test_scheduler/fast:
 .PHONY : test_scheduler/fast
 
 #=============================================================================
-# Target rules for targets named test_iomanager
+# Target rules for targets named test_hook
 
 # Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
+test_hook: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
 
 # fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
+test_hook/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
 
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
@@ -295,29 +295,29 @@ tests/test_fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
-tests/test_iomanager.o: tests/test_iomanager.cc.o
-.PHONY : tests/test_iomanager.o
+tests/test_hook.o: tests/test_hook.cc.o
+.PHONY : tests/test_hook.o
 
 # target to build an object file
-tests/test_iomanager.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
-.PHONY : tests/test_iomanager.cc.o
+tests/test_hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
 
-tests/test_iomanager.i: tests/test_iomanager.cc.i
-.PHONY : tests/test_iomanager.i
+tests/test_hook.i: tests/test_hook.cc.i
+.PHONY : tests/test_hook.i
 
 # target to preprocess a source file
-tests/test_iomanager.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
-.PHONY : tests/test_iomanager.cc.i
+tests/test_hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
 
-tests/test_iomanager.s: tests/test_iomanager.cc.s
-.PHONY : tests/test_iomanager.s
+tests/test_hook.s: tests/test_hook.cc.s
+.PHONY : tests/test_hook.s
 
 # target to generate assembly for a file
-tests/test_iomanager.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
-.PHONY : tests/test_iomanager.cc.s
+tests/test_hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
 
 tests/test_scheduler.o: tests/test_scheduler.cc.o
 .PHONY : tests/test_scheduler.o
@@ -415,6 +415,30 @@ yhx/config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/config.cc.s
 .PHONY : yhx/config.cc.s
 
+yhx/fd_manager.o: yhx/fd_manager.cc.o
+.PHONY : yhx/fd_manager.o
+
+# target to build an object file
+yhx/fd_manager.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/fd_manager.cc.o
+.PHONY : yhx/fd_manager.cc.o
+
+yhx/fd_manager.i: yhx/fd_manager.cc.i
+.PHONY : yhx/fd_manager.i
+
+# target to preprocess a source file
+yhx/fd_manager.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/fd_manager.cc.i
+.PHONY : yhx/fd_manager.cc.i
+
+yhx/fd_manager.s: yhx/fd_manager.cc.s
+.PHONY : yhx/fd_manager.s
+
+# target to generate assembly for a file
+yhx/fd_manager.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/fd_manager.cc.s
+.PHONY : yhx/fd_manager.cc.s
+
 yhx/fiber.o: yhx/fiber.cc.o
 .PHONY : yhx/fiber.o
 
@@ -438,6 +462,30 @@ yhx/fiber.s: yhx/fiber.cc.s
 yhx/fiber.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/fiber.cc.s
 .PHONY : yhx/fiber.cc.s
+
+yhx/hook.o: yhx/hook.cc.o
+.PHONY : yhx/hook.o
+
+# target to build an object file
+yhx/hook.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/hook.cc.o
+.PHONY : yhx/hook.cc.o
+
+yhx/hook.i: yhx/hook.cc.i
+.PHONY : yhx/hook.i
+
+# target to preprocess a source file
+yhx/hook.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/hook.cc.i
+.PHONY : yhx/hook.cc.i
+
+yhx/hook.s: yhx/hook.cc.s
+.PHONY : yhx/hook.s
+
+# target to generate assembly for a file
+yhx/hook.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/hook.cc.s
+.PHONY : yhx/hook.cc.s
 
 yhx/iomanager.o: yhx/iomanager.cc.o
 .PHONY : yhx/iomanager.o
@@ -618,7 +666,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_fiber"
-	@echo "... test_iomanager"
+	@echo "... test_hook"
 	@echo "... test_scheduler"
 	@echo "... test_thread"
 	@echo "... test_util"
@@ -632,9 +680,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
-	@echo "... tests/test_iomanager.o"
-	@echo "... tests/test_iomanager.i"
-	@echo "... tests/test_iomanager.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
@@ -647,9 +695,15 @@ help:
 	@echo "... yhx/config.o"
 	@echo "... yhx/config.i"
 	@echo "... yhx/config.s"
+	@echo "... yhx/fd_manager.o"
+	@echo "... yhx/fd_manager.i"
+	@echo "... yhx/fd_manager.s"
 	@echo "... yhx/fiber.o"
 	@echo "... yhx/fiber.i"
 	@echo "... yhx/fiber.s"
+	@echo "... yhx/hook.o"
+	@echo "... yhx/hook.i"
+	@echo "... yhx/hook.s"
 	@echo "... yhx/iomanager.o"
 	@echo "... yhx/iomanager.i"
 	@echo "... yhx/iomanager.s"

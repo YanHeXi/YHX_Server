@@ -247,20 +247,20 @@ int main(int argc, char **argv)
     // YHX_LOG_INFO(YHX_LOG_ROOT()) << g_int_value_config->getValue();
     // YHX_LOG_INFO(YHX_LOG_ROOT()) << g_float_value_config->toString();
     // test_yaml();
-    // test_config();
+    test_config();
     // test_class();
-    test_log();
+    // test_log();
     // yhx::EnvMgr::GetInstance()->init(argc, argv);
     // test_loadconf();
     // std::cout << " ==== " << std::endl;
     // sleep(10);
     // test_loadconf();
     // return 0;
-    yhx::Config::Visit([](yhx::ConfigVarBase::ptr var)
-                       { YHX_LOG_INFO(YHX_LOG_ROOT()) << "name=" << var->getName()
-                                                      << " description=" << var->getDescription()
-                                                      << " typename=" << var->getTypeName()
-                                                      << " value=" << var->toString(); });
+    // yhx::Config::Visit([](yhx::ConfigVarBase::ptr var)
+    //                    { YHX_LOG_INFO(YHX_LOG_ROOT()) << "name=" << var->getName()
+    //                                                   << " description=" << var->getDescription()
+    //                                                   << " typename=" << var->getTypeName()
+    //                                                   << " value=" << var->toString(); });
 
     return 0;
 }

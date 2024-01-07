@@ -1,7 +1,7 @@
 #include "scheduler.h"
 #include "log.h"
 #include "macro.h"
-// #include "hook.h"
+#include "hook.h"
 
 namespace yhx
 {
@@ -159,7 +159,7 @@ namespace yhx
     void Scheduler::run()
     {
         YHX_LOG_DEBUG(g_logger) << m_name << " run";
-        // set_hook_enable(true);
+        set_hook_enable(true);
         setThis();
         if (yhx::GetThreadId() != m_rootThread)
         {

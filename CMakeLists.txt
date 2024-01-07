@@ -22,7 +22,10 @@ set(LIB_SRC
     yhx/fiber.cc
     yhx/scheduler.cc
     yhx/iomanager.cc
-    yhx/timer.cc)
+    yhx/timer.cc
+    yhx/hook.cc
+    yhx/fd_manager.cc
+    )
 
 add_library(yhx SHARED ${LIB_SRC})
 
@@ -32,6 +35,7 @@ find_library(PTHREAD pthread)
 
 set(LIBS
     yhx
+    dl
     pthread
     yaml-cpp)
 
@@ -66,10 +70,11 @@ add_dependencies(test_scheduler yhx)
 force_redefine_file_macro_for_sources(test_scheduler)
 target_link_libraries(test_scheduler ${LIBS})
 
-add_executable(test_iomanager ../tests/test_iomanager.cc)
-add_dependencies(test_iomanager yhx)
-force_redefine_file_macro_for_sources(test_iomanager)
-target_link_libraries(test_iomanager ${LIBS})
+add_executable(test_hook ../tests/test_hook.cc)
+add_dependencies(test_hook yhx)
+force_redefine_file_macro_for_sources(test_hook)
+target_link_libraries(test_hook ${LIBS})
+
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
