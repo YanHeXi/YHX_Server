@@ -223,6 +223,19 @@ test_hook/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
 .PHONY : test_hook/fast
 
+#=============================================================================
+# Target rules for targets named test_address
+
+# Build rule for target.
+test_address: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_address
+.PHONY : test_address
+
+# fast build rule for target.
+test_address/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
+.PHONY : test_address/fast
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -246,6 +259,30 @@ tests/test.s: tests/test.cc.s
 tests/test.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests/test.cc.s
 .PHONY : tests/test.cc.s
+
+tests/test_address.o: tests/test_address.cc.o
+.PHONY : tests/test_address.o
+
+# target to build an object file
+tests/test_address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.o
+.PHONY : tests/test_address.cc.o
+
+tests/test_address.i: tests/test_address.cc.i
+.PHONY : tests/test_address.i
+
+# target to preprocess a source file
+tests/test_address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.i
+.PHONY : tests/test_address.cc.i
+
+tests/test_address.s: tests/test_address.cc.s
+.PHONY : tests/test_address.s
+
+# target to generate assembly for a file
+tests/test_address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
+.PHONY : tests/test_address.cc.s
 
 tests/test_config.o: tests/test_config.cc.o
 .PHONY : tests/test_config.o
@@ -390,6 +427,30 @@ tests/test_util.s: tests/test_util.cc.s
 tests/test_util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.s
 .PHONY : tests/test_util.cc.s
+
+yhx/address.o: yhx/address.cc.o
+.PHONY : yhx/address.o
+
+# target to build an object file
+yhx/address.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/address.cc.o
+.PHONY : yhx/address.cc.o
+
+yhx/address.i: yhx/address.cc.i
+.PHONY : yhx/address.i
+
+# target to preprocess a source file
+yhx/address.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/address.cc.i
+.PHONY : yhx/address.cc.i
+
+yhx/address.s: yhx/address.cc.s
+.PHONY : yhx/address.s
+
+# target to generate assembly for a file
+yhx/address.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/address.cc.s
+.PHONY : yhx/address.cc.s
 
 yhx/config.o: yhx/config.cc.o
 .PHONY : yhx/config.o
@@ -664,6 +725,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... test_address"
 	@echo "... test_config"
 	@echo "... test_fiber"
 	@echo "... test_hook"
@@ -674,6 +736,9 @@ help:
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"
+	@echo "... tests/test_address.o"
+	@echo "... tests/test_address.i"
+	@echo "... tests/test_address.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
@@ -692,6 +757,9 @@ help:
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"
+	@echo "... yhx/address.o"
+	@echo "... yhx/address.i"
+	@echo "... yhx/address.s"
 	@echo "... yhx/config.o"
 	@echo "... yhx/config.i"
 	@echo "... yhx/config.s"

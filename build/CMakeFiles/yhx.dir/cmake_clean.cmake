@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/yhx.dir/yhx/address.cc.o"
+  "CMakeFiles/yhx.dir/yhx/address.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/config.cc.o"
   "CMakeFiles/yhx.dir/yhx/config.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/fd_manager.cc.o"

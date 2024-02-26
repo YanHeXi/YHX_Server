@@ -29,7 +29,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 30,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
@@ -53,8 +53,14 @@
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 32,
+				"line" : 33,
 				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 19,
+				"parent" : 5
 			},
 			{
 				"command" : 3,
@@ -499,6 +505,40 @@
 			[
 				10
 			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 17,
+					"define" : "__FILE__=\"yhx/address.cc\""
+				},
+				{
+					"define" : "yhx_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/yanhexi/vscode_project/YHX_Server/."
+				},
+				{
+					"backtrace" : 4,
+					"path" : "/home/yanhexi/Downloads/tool"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				11
+			]
 		}
 	],
 	"id" : "yhx::@6890427a1f51a3e7e1df",
@@ -541,7 +581,8 @@
 				7,
 				8,
 				9,
-				10
+				10,
+				11
 			]
 		}
 	],
@@ -611,6 +652,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 10,
 			"path" : "yhx/fd_manager.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 11,
+			"path" : "yhx/address.cc",
 			"sourceGroupIndex" : 0
 		}
 	],

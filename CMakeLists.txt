@@ -25,6 +25,7 @@ set(LIB_SRC
     yhx/timer.cc
     yhx/hook.cc
     yhx/fd_manager.cc
+    yhx/address.cc
     )
 
 add_library(yhx SHARED ${LIB_SRC})
@@ -74,6 +75,11 @@ add_executable(test_hook ../tests/test_hook.cc)
 add_dependencies(test_hook yhx)
 force_redefine_file_macro_for_sources(test_hook)
 target_link_libraries(test_hook ${LIBS})
+
+add_executable(test_address ../tests/test_address.cc)
+add_dependencies(test_address yhx)
+force_redefine_file_macro_for_sources(test_address)
+target_link_libraries(test_address ${LIBS})
 
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

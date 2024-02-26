@@ -30,3 +30,5 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/fd_manager.cc.o_DEFINES = __FILE__="yhx/fd_manager.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/address.cc.o_DEFINES = __FILE__="yhx/address.cc"
+
