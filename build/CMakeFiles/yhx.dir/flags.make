@@ -6,7 +6,7 @@ CXX_DEFINES = -Dyhx_EXPORTS
 
 CXX_INCLUDES = -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool
 
-CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC
+CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -lssl -lcrypto -g -fPIC
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/log.cc.o_DEFINES = __FILE__="yhx/log.cc"
 
@@ -31,4 +31,6 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 # Custom defines: CMakeFiles/yhx.dir/yhx/fd_manager.cc.o_DEFINES = __FILE__="yhx/fd_manager.cc"
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/address.cc.o_DEFINES = __FILE__="yhx/address.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/socket.cc.o_DEFINES = __FILE__="yhx/socket.cc"
 

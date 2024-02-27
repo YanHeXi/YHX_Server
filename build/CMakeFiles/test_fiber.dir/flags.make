@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downloads/tool
 
-CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g
+CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -lssl -lcrypto -g
 
 # Custom defines: CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o_DEFINES = __FILE__="../tests/test_fiber.cc"
 

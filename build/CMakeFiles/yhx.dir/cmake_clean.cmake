@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/yhx.dir/yhx/mutex.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/scheduler.cc.o"
   "CMakeFiles/yhx.dir/yhx/scheduler.cc.o.d"
+  "CMakeFiles/yhx.dir/yhx/socket.cc.o"
+  "CMakeFiles/yhx.dir/yhx/socket.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/thread.cc.o"
   "CMakeFiles/yhx.dir/yhx/thread.cc.o.d"
   "CMakeFiles/yhx.dir/yhx/timer.cc.o"

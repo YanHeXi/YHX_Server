@@ -236,6 +236,19 @@ test_address/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/build
 .PHONY : test_address/fast
 
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -379,6 +392,30 @@ tests/test_scheduler.s: tests/test_scheduler.cc.s
 tests/test_scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
 .PHONY : tests/test_scheduler.cc.s
+
+tests/test_socket.o: tests/test_socket.cc.o
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
 
 tests/test_thread.o: tests/test_thread.cc.o
 .PHONY : tests/test_thread.o
@@ -644,6 +681,30 @@ yhx/scheduler.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/scheduler.cc.s
 .PHONY : yhx/scheduler.cc.s
 
+yhx/socket.o: yhx/socket.cc.o
+.PHONY : yhx/socket.o
+
+# target to build an object file
+yhx/socket.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/socket.cc.o
+.PHONY : yhx/socket.cc.o
+
+yhx/socket.i: yhx/socket.cc.i
+.PHONY : yhx/socket.i
+
+# target to preprocess a source file
+yhx/socket.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/socket.cc.i
+.PHONY : yhx/socket.cc.i
+
+yhx/socket.s: yhx/socket.cc.s
+.PHONY : yhx/socket.s
+
+# target to generate assembly for a file
+yhx/socket.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/socket.cc.s
+.PHONY : yhx/socket.cc.s
+
 yhx/thread.o: yhx/thread.cc.o
 .PHONY : yhx/thread.o
 
@@ -730,6 +791,7 @@ help:
 	@echo "... test_fiber"
 	@echo "... test_hook"
 	@echo "... test_scheduler"
+	@echo "... test_socket"
 	@echo "... test_thread"
 	@echo "... test_util"
 	@echo "... yhx"
@@ -751,6 +813,9 @@ help:
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
@@ -784,6 +849,9 @@ help:
 	@echo "... yhx/scheduler.o"
 	@echo "... yhx/scheduler.i"
 	@echo "... yhx/scheduler.s"
+	@echo "... yhx/socket.o"
+	@echo "... yhx/socket.i"
+	@echo "... yhx/socket.s"
 	@echo "... yhx/thread.o"
 	@echo "... yhx/thread.i"
 	@echo "... yhx/thread.s"

@@ -75,6 +75,7 @@ all: CMakeFiles/test_fiber.dir/all
 all: CMakeFiles/test_scheduler.dir/all
 all: CMakeFiles/test_hook.dir/all
 all: CMakeFiles/test_address.dir/all
+all: CMakeFiles/test_socket.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -91,6 +92,7 @@ clean: CMakeFiles/test_fiber.dir/clean
 clean: CMakeFiles/test_scheduler.dir/clean
 clean: CMakeFiles/test_hook.dir/clean
 clean: CMakeFiles/test_address.dir/clean
+clean: CMakeFiles/test_socket.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -100,12 +102,12 @@ clean: CMakeFiles/test_address.dir/clean
 CMakeFiles/yhx.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24,25,26,27,28,29 "Built target yhx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26,27,28,29,30,31,32 "Built target yhx"
 .PHONY : CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/yhx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/yhx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/yhx.dir/rule
@@ -131,7 +133,7 @@ CMakeFiles/test.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
@@ -157,7 +159,7 @@ CMakeFiles/test_config.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_config.dir/rule
@@ -178,12 +180,12 @@ CMakeFiles/test_config.dir/clean:
 CMakeFiles/test_thread.dir/all: CMakeFiles/yhx.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=13,14 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=15,16 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_thread.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_thread.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_thread.dir/rule
@@ -204,12 +206,12 @@ CMakeFiles/test_thread.dir/clean:
 CMakeFiles/test_util.dir/all: CMakeFiles/yhx.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=15,16 "Built target test_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=17,18 "Built target test_util"
 .PHONY : CMakeFiles/test_util.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_util.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_util.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_util.dir/rule
@@ -235,7 +237,7 @@ CMakeFiles/test_fiber.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_fiber.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_fiber.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_fiber.dir/rule
@@ -261,7 +263,7 @@ CMakeFiles/test_scheduler.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_scheduler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_scheduler.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_scheduler.dir/rule
@@ -287,7 +289,7 @@ CMakeFiles/test_hook.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_hook.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_hook.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_hook.dir/rule
@@ -313,7 +315,7 @@ CMakeFiles/test_address.dir/all: CMakeFiles/yhx.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_address.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_address.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_address.dir/rule
@@ -326,6 +328,32 @@ test_address: CMakeFiles/test_address.dir/rule
 CMakeFiles/test_address.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/clean
 .PHONY : CMakeFiles/test_address.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_socket.dir
+
+# All Build rule for target.
+CMakeFiles/test_socket.dir/all: CMakeFiles/yhx.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=13,14 "Built target test_socket"
+.PHONY : CMakeFiles/test_socket.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_socket.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 16
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_socket.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_socket.dir/rule
+
+# Convenience name for target.
+test_socket: CMakeFiles/test_socket.dir/rule
+.PHONY : test_socket
+
+# clean rule for target.
+CMakeFiles/test_socket.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/clean
+.PHONY : CMakeFiles/test_socket.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -3,10 +3,13 @@ project(yhx)
 
 include (cmake/utils.cmake)
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -lssl -lcrypto")
+
+find_package(OpenSSL REQUIRED)
 
 include_directories(.)
 include_directories(/home/yanhexi/Downloads/tool)
+
 link_directories(/home/yanhexi/vscode_project/YHX_Server/lib)
 
 
@@ -26,9 +29,10 @@ set(LIB_SRC
     yhx/hook.cc
     yhx/fd_manager.cc
     yhx/address.cc
+    yhx/socket.cc
     )
 
-add_library(yhx SHARED ${LIB_SRC})
+add_library(yhx SHARED ${LIB_SRC} )
 
 force_redefine_file_macro_for_sources(yhx)
 find_library(YAMLCPP yaml-cpp)
@@ -81,6 +85,10 @@ add_dependencies(test_address yhx)
 force_redefine_file_macro_for_sources(test_address)
 target_link_libraries(test_address ${LIBS})
 
+add_executable(test_socket ../tests/test_socket.cc)
+add_dependencies(test_socket yhx)
+force_redefine_file_macro_for_sources(test_socket)
+target_link_libraries(test_socket ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
