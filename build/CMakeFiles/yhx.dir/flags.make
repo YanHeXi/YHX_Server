@@ -34,3 +34,5 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/socket.cc.o_DEFINES = __FILE__="yhx/socket.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/bytearray.cc.o_DEFINES = __FILE__="yhx/bytearray.cc"
+
