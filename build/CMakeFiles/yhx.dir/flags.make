@@ -36,3 +36,11 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/bytearray.cc.o_DEFINES = __FILE__="yhx/bytearray.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/http.cc.o_DEFINES = __FILE__="yhx/http/http.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/httpclient_parser.rl.cc.o_DEFINES = __FILE__="yhx/http/httpclient_parser.rl.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/http11_parser.rl.cc.o_DEFINES = __FILE__="yhx/http/http11_parser.rl.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/http_parser.cc.o_DEFINES = __FILE__="yhx/http/http_parser.cc"
+

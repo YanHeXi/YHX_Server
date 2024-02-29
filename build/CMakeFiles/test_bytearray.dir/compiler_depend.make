@@ -6,6 +6,7 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
   /home/yanhexi/vscode_project/YHX_Server/yhx/config.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/fiber.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/log.h \
+  /home/yanhexi/vscode_project/YHX_Server/yhx/macro.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/mutex.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/noncopyable.h \
   /home/yanhexi/vscode_project/YHX_Server/yhx/scheduler.h \
@@ -1137,6 +1138,10 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/mpl/aux_/config/pp_counter.hpp:
 
+/usr/include/c++/13.2.1/bits/basic_ios.tcc:
+
+/usr/include/boost/preprocessor/seq/transform.hpp:
+
 /usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
 
 /usr/include/boost/mpl/aux_/config/preprocessor.hpp:
@@ -1333,9 +1338,7 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/concept/detail/has_constraints.hpp:
 
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/boost/type_traits/detail/yes_no_type.hpp:
+/usr/include/boost/concept/detail/general.hpp:
 
 /usr/include/bits/posix1_lim.h:
 
@@ -1411,6 +1414,28 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/type_traits/make_void.hpp:
 
+/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
+
+/usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
+
+/usr/include/boost/iterator/iterator_categories.hpp:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/boost/preprocessor/logical/not.hpp:
+
+/usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/bits/types/clockid_t.h:
+
 /usr/include/boost/mpl/aux_/arity_spec.hpp:
 
 /usr/include/linux/errno.h:
@@ -1471,6 +1496,22 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/include/boost/config/detail/select_platform_config.hpp:
+
+/usr/include/boost/lexical_cast/detail/widest_char.hpp:
+
+/usr/include/boost/preprocessor/control/deduce_d.hpp:
+
+/usr/include/bits/syscall.h:
+
+/usr/include/boost/mpl/has_xxx.hpp:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/c++/13.2.1/clocale:
+
+/usr/include/bits/fp-logb.h:
+
 /usr/include/c++/13.2.1/stdexcept:
 
 /home/yanhexi/vscode_project/YHX_Server/yhx/scheduler.h:
@@ -1484,6 +1525,12 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 /usr/include/c++/13.2.1/cstdint:
 
 /home/yanhexi/vscode_project/YHX_Server/yhx/config.h:
+
+/home/yanhexi/vscode_project/YHX_Server/yhx/macro.h:
+
+/usr/local/include/yaml-cpp/node/detail/node_iterator.h:
+
+/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
 
 /usr/include/bits/sockaddr.h:
 
@@ -1515,12 +1562,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/preprocessor/repetition/enum_params.hpp:
 
-/usr/include/linux/stddef.h:
-
-/usr/include/c++/13.2.1/clocale:
-
-/usr/include/bits/fp-logb.h:
-
 /usr/include/asm-generic/socket.h:
 
 /usr/include/gnu/stubs-64.h:
@@ -1536,38 +1577,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 /usr/include/asm/posix_types.h:
 
 /usr/include/asm/posix_types_64.h:
-
-/usr/include/boost/config/detail/select_platform_config.hpp:
-
-/usr/include/boost/lexical_cast/detail/widest_char.hpp:
-
-/usr/include/boost/preprocessor/control/deduce_d.hpp:
-
-/usr/include/bits/syscall.h:
-
-/usr/include/boost/mpl/has_xxx.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
-
-/usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/bits/fp-fast.h:
-
-/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
-
-/usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
-
-/usr/include/boost/iterator/iterator_categories.hpp:
-
-/usr/include/bits/types/cookie_io_functions_t.h:
-
-/usr/include/boost/preprocessor/logical/not.hpp:
-
-/usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/types/clockid_t.h:
 
 /usr/include/boost/mpl/arg.hpp:
 
@@ -1649,6 +1658,10 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/preprocessor/logical/limits/bool_256.hpp:
 
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/boost/type_traits/detail/yes_no_type.hpp:
+
 /usr/include/boost/config/helper_macros.hpp:
 
 /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp:
@@ -1689,8 +1702,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/bits/stdio_lim.h:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
-
 /usr/include/boost/mpl/aux_/is_msvc_eti_arg.hpp:
 
 /usr/include/c++/13.2.1/array:
@@ -1702,8 +1713,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 /usr/include/boost/exception/exception.hpp:
 
 /usr/include/bits/stdlib-bsearch.h:
-
-/usr/include/boost/concept/detail/general.hpp:
 
 /usr/include/boost/mpl/aux_/full_lambda.hpp:
 
@@ -1798,6 +1807,8 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 /usr/include/boost/core/enable_if.hpp:
 
 /usr/include/boost/array.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
 
@@ -1945,10 +1956,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 
 /usr/include/boost/numeric/conversion/detail/is_subranged.hpp:
 
-/usr/local/include/yaml-cpp/node/detail/node_iterator.h:
-
-/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
-
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
 /usr/include/boost/numeric/conversion/int_float_mixture_enum.hpp:
@@ -1998,10 +2005,6 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_pr
 /usr/include/boost/preprocessor/comparison/not_equal.hpp:
 
 /usr/include/boost/preprocessor/config/config.hpp:
-
-/usr/include/boost/preprocessor/seq/transform.hpp:
-
-/usr/include/c++/13.2.1/bits/basic_ios.tcc:
 
 /usr/include/boost/preprocessor/config/limits.hpp:
 

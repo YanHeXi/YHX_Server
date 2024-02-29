@@ -31,6 +31,10 @@ set(LIB_SRC
     yhx/address.cc
     yhx/socket.cc
     yhx/bytearray.cc
+    yhx/http/http.cc
+    yhx/http/httpclient_parser.rl.cc
+    yhx/http/http11_parser.rl.cc
+    yhx/http/http_parser.cc
     )
 
 add_library(yhx SHARED ${LIB_SRC} )
@@ -95,6 +99,16 @@ add_executable(test_bytearray ../tests/test_bytearray.cc)
 add_dependencies(test_bytearray yhx)
 force_redefine_file_macro_for_sources(test_bytearray)
 target_link_libraries(test_bytearray ${LIBS})
+
+add_executable(test_http ../tests/test_http.cc)
+add_dependencies(test_http yhx)
+force_redefine_file_macro_for_sources(test_http)
+target_link_libraries(test_http ${LIBS})
+
+add_executable(test_http_parser ../tests/test_http_parser.cc)
+add_dependencies(test_http_parser yhx)
+force_redefine_file_macro_for_sources(test_http_parser)
+target_link_libraries(test_http_parser ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
