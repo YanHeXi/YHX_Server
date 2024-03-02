@@ -46,3 +46,11 @@ CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unuse
 
 # Custom defines: CMakeFiles/yhx.dir/yhx/tcp_server.cc.o_DEFINES = __FILE__="yhx/tcp_server.cc"
 
+# Custom defines: CMakeFiles/yhx.dir/yhx/stream.cc.o_DEFINES = __FILE__="yhx/stream.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o_DEFINES = __FILE__="yhx/streams/socket_stream.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/http_session.cc.o_DEFINES = __FILE__="yhx/http/http_session.cc"
+
+# Custom defines: CMakeFiles/yhx.dir/yhx/http/http_server.cc.o_DEFINES = __FILE__="yhx/http/http_server.cc"
+

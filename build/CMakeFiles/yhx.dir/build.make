@@ -338,6 +338,62 @@ CMakeFiles/yhx.dir/yhx/tcp_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/tcp_server.cc.s"
 	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/tcp_server.cc -o CMakeFiles/yhx.dir/yhx/tcp_server.cc.s
 
+CMakeFiles/yhx.dir/yhx/stream.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/stream.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/stream.cc
+CMakeFiles/yhx.dir/yhx/stream.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/yhx.dir/yhx/stream.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/stream.cc.o -MF CMakeFiles/yhx.dir/yhx/stream.cc.o.d -o CMakeFiles/yhx.dir/yhx/stream.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/stream.cc
+
+CMakeFiles/yhx.dir/yhx/stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/stream.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/stream.cc > CMakeFiles/yhx.dir/yhx/stream.cc.i
+
+CMakeFiles/yhx.dir/yhx/stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/stream.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/stream.cc -o CMakeFiles/yhx.dir/yhx/stream.cc.s
+
+CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/streams/socket_stream.cc
+CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o -MF CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o.d -o CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/streams/socket_stream.cc
+
+CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/streams/socket_stream.cc > CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.i
+
+CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/streams/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/streams/socket_stream.cc -o CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.s
+
+CMakeFiles/yhx.dir/yhx/http/http_session.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/http/http_session.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_session.cc
+CMakeFiles/yhx.dir/yhx/http/http_session.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/yhx.dir/yhx/http/http_session.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/http/http_session.cc.o -MF CMakeFiles/yhx.dir/yhx/http/http_session.cc.o.d -o CMakeFiles/yhx.dir/yhx/http/http_session.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_session.cc
+
+CMakeFiles/yhx.dir/yhx/http/http_session.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/http/http_session.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_session.cc > CMakeFiles/yhx.dir/yhx/http/http_session.cc.i
+
+CMakeFiles/yhx.dir/yhx/http/http_session.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/http/http_session.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_session.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_session.cc -o CMakeFiles/yhx.dir/yhx/http/http_session.cc.s
+
+CMakeFiles/yhx.dir/yhx/http/http_server.cc.o: CMakeFiles/yhx.dir/flags.make
+CMakeFiles/yhx.dir/yhx/http/http_server.cc.o: /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_server.cc
+CMakeFiles/yhx.dir/yhx/http/http_server.cc.o: CMakeFiles/yhx.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/yhx.dir/yhx/http/http_server.cc.o"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/yhx.dir/yhx/http/http_server.cc.o -MF CMakeFiles/yhx.dir/yhx/http/http_server.cc.o.d -o CMakeFiles/yhx.dir/yhx/http/http_server.cc.o -c /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_server.cc
+
+CMakeFiles/yhx.dir/yhx/http/http_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/yhx.dir/yhx/http/http_server.cc.i"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_server.cc > CMakeFiles/yhx.dir/yhx/http/http_server.cc.i
+
+CMakeFiles/yhx.dir/yhx/http/http_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/yhx.dir/yhx/http/http_server.cc.s"
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"yhx/http/http_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/yhx/http/http_server.cc -o CMakeFiles/yhx.dir/yhx/http/http_server.cc.s
+
 # Object files for target yhx
 yhx_OBJECTS = \
 "CMakeFiles/yhx.dir/yhx/log.cc.o" \
@@ -358,7 +414,11 @@ yhx_OBJECTS = \
 "CMakeFiles/yhx.dir/yhx/http/httpclient_parser.rl.cc.o" \
 "CMakeFiles/yhx.dir/yhx/http/http11_parser.rl.cc.o" \
 "CMakeFiles/yhx.dir/yhx/http/http_parser.cc.o" \
-"CMakeFiles/yhx.dir/yhx/tcp_server.cc.o"
+"CMakeFiles/yhx.dir/yhx/tcp_server.cc.o" \
+"CMakeFiles/yhx.dir/yhx/stream.cc.o" \
+"CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o" \
+"CMakeFiles/yhx.dir/yhx/http/http_session.cc.o" \
+"CMakeFiles/yhx.dir/yhx/http/http_server.cc.o"
 
 # External object files for target yhx
 yhx_EXTERNAL_OBJECTS =
@@ -382,9 +442,13 @@ libyhx.so: CMakeFiles/yhx.dir/yhx/http/httpclient_parser.rl.cc.o
 libyhx.so: CMakeFiles/yhx.dir/yhx/http/http11_parser.rl.cc.o
 libyhx.so: CMakeFiles/yhx.dir/yhx/http/http_parser.cc.o
 libyhx.so: CMakeFiles/yhx.dir/yhx/tcp_server.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/stream.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/http/http_session.cc.o
+libyhx.so: CMakeFiles/yhx.dir/yhx/http/http_server.cc.o
 libyhx.so: CMakeFiles/yhx.dir/build.make
 libyhx.so: CMakeFiles/yhx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library libyhx.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX shared library libyhx.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yhx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

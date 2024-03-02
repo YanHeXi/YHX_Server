@@ -866,6 +866,54 @@ yhx/http/http_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_parser.cc.s
 .PHONY : yhx/http/http_parser.cc.s
 
+yhx/http/http_server.o: yhx/http/http_server.cc.o
+.PHONY : yhx/http/http_server.o
+
+# target to build an object file
+yhx/http/http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_server.cc.o
+.PHONY : yhx/http/http_server.cc.o
+
+yhx/http/http_server.i: yhx/http/http_server.cc.i
+.PHONY : yhx/http/http_server.i
+
+# target to preprocess a source file
+yhx/http/http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_server.cc.i
+.PHONY : yhx/http/http_server.cc.i
+
+yhx/http/http_server.s: yhx/http/http_server.cc.s
+.PHONY : yhx/http/http_server.s
+
+# target to generate assembly for a file
+yhx/http/http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_server.cc.s
+.PHONY : yhx/http/http_server.cc.s
+
+yhx/http/http_session.o: yhx/http/http_session.cc.o
+.PHONY : yhx/http/http_session.o
+
+# target to build an object file
+yhx/http/http_session.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_session.cc.o
+.PHONY : yhx/http/http_session.cc.o
+
+yhx/http/http_session.i: yhx/http/http_session.cc.i
+.PHONY : yhx/http/http_session.i
+
+# target to preprocess a source file
+yhx/http/http_session.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_session.cc.i
+.PHONY : yhx/http/http_session.cc.i
+
+yhx/http/http_session.s: yhx/http/http_session.cc.s
+.PHONY : yhx/http/http_session.s
+
+# target to generate assembly for a file
+yhx/http/http_session.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/http/http_session.cc.s
+.PHONY : yhx/http/http_session.cc.s
+
 yhx/http/httpclient_parser.rl.o: yhx/http/httpclient_parser.rl.cc.o
 .PHONY : yhx/http/httpclient_parser.rl.o
 
@@ -1009,6 +1057,54 @@ yhx/socket.s: yhx/socket.cc.s
 yhx/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/socket.cc.s
 .PHONY : yhx/socket.cc.s
+
+yhx/stream.o: yhx/stream.cc.o
+.PHONY : yhx/stream.o
+
+# target to build an object file
+yhx/stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/stream.cc.o
+.PHONY : yhx/stream.cc.o
+
+yhx/stream.i: yhx/stream.cc.i
+.PHONY : yhx/stream.i
+
+# target to preprocess a source file
+yhx/stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/stream.cc.i
+.PHONY : yhx/stream.cc.i
+
+yhx/stream.s: yhx/stream.cc.s
+.PHONY : yhx/stream.s
+
+# target to generate assembly for a file
+yhx/stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/stream.cc.s
+.PHONY : yhx/stream.cc.s
+
+yhx/streams/socket_stream.o: yhx/streams/socket_stream.cc.o
+.PHONY : yhx/streams/socket_stream.o
+
+# target to build an object file
+yhx/streams/socket_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.o
+.PHONY : yhx/streams/socket_stream.cc.o
+
+yhx/streams/socket_stream.i: yhx/streams/socket_stream.cc.i
+.PHONY : yhx/streams/socket_stream.i
+
+# target to preprocess a source file
+yhx/streams/socket_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.i
+.PHONY : yhx/streams/socket_stream.cc.i
+
+yhx/streams/socket_stream.s: yhx/streams/socket_stream.cc.s
+.PHONY : yhx/streams/socket_stream.s
+
+# target to generate assembly for a file
+yhx/streams/socket_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/yhx.dir/build.make CMakeFiles/yhx.dir/yhx/streams/socket_stream.cc.s
+.PHONY : yhx/streams/socket_stream.cc.s
 
 yhx/tcp_server.o: yhx/tcp_server.cc.o
 .PHONY : yhx/tcp_server.o
@@ -1198,6 +1294,12 @@ help:
 	@echo "... yhx/http/http_parser.o"
 	@echo "... yhx/http/http_parser.i"
 	@echo "... yhx/http/http_parser.s"
+	@echo "... yhx/http/http_server.o"
+	@echo "... yhx/http/http_server.i"
+	@echo "... yhx/http/http_server.s"
+	@echo "... yhx/http/http_session.o"
+	@echo "... yhx/http/http_session.i"
+	@echo "... yhx/http/http_session.s"
 	@echo "... yhx/http/httpclient_parser.rl.o"
 	@echo "... yhx/http/httpclient_parser.rl.i"
 	@echo "... yhx/http/httpclient_parser.rl.s"
@@ -1216,6 +1318,12 @@ help:
 	@echo "... yhx/socket.o"
 	@echo "... yhx/socket.i"
 	@echo "... yhx/socket.s"
+	@echo "... yhx/stream.o"
+	@echo "... yhx/stream.i"
+	@echo "... yhx/stream.s"
+	@echo "... yhx/streams/socket_stream.o"
+	@echo "... yhx/streams/socket_stream.i"
+	@echo "... yhx/streams/socket_stream.s"
 	@echo "... yhx/tcp_server.o"
 	@echo "... yhx/tcp_server.i"
 	@echo "... yhx/tcp_server.s"

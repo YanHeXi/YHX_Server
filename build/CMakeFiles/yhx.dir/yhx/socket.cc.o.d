@@ -244,6 +244,15 @@ CMakeFiles/yhx.dir/yhx/socket.cc.o: \
  /home/yanhexi/vscode_project/YHX_Server/yhx/util.h \
  /usr/include/c++/13.2.1/cxxabi.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
+ /usr/include/json/json.h /usr/include/json/config.h \
+ /usr/include/c++/13.2.1/cstddef /usr/include/json/allocator.h \
+ /usr/include/c++/13.2.1/cstring /usr/include/json/version.h \
+ /usr/include/json/json_features.h /usr/include/json/forwards.h \
+ /usr/include/json/reader.h /usr/include/json/value.h \
+ /usr/include/c++/13.2.1/array /usr/include/c++/13.2.1/compare \
+ /usr/include/c++/13.2.1/deque /usr/include/c++/13.2.1/bits/stl_deque.h \
+ /usr/include/c++/13.2.1/bits/deque.tcc /usr/include/c++/13.2.1/stack \
+ /usr/include/c++/13.2.1/bits/stl_stack.h /usr/include/json/writer.h \
  /usr/include/sys/syscall.h /usr/include/asm/unistd.h \
  /usr/include/asm/unistd_64.h /usr/include/bits/syscall.h \
  /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
@@ -254,8 +263,7 @@ CMakeFiles/yhx.dir/yhx/socket.cc.o: \
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/13.2.1/cstddef \
- /usr/local/include/yaml-cpp/binary.h \
+ /usr/include/bits/iscanonical.h /usr/local/include/yaml-cpp/binary.h \
  /usr/local/include/yaml-cpp/emitterdef.h \
  /usr/local/include/yaml-cpp/emittermanip.h \
  /usr/local/include/yaml-cpp/null.h \
@@ -281,8 +289,8 @@ CMakeFiles/yhx.dir/yhx/socket.cc.o: \
  /usr/include/c++/13.2.1/bits/stream_iterator.h \
  /usr/local/include/yaml-cpp/node/iterator.h \
  /usr/local/include/yaml-cpp/node/detail/iterator.h \
- /usr/local/include/yaml-cpp/node/convert.h /usr/include/c++/13.2.1/array \
- /usr/include/c++/13.2.1/compare /usr/include/c++/13.2.1/unordered_map \
+ /usr/local/include/yaml-cpp/node/convert.h \
+ /usr/include/c++/13.2.1/unordered_map \
  /usr/include/c++/13.2.1/bits/unordered_map.h \
  /usr/include/c++/13.2.1/bits/hashtable.h \
  /usr/include/c++/13.2.1/bits/hashtable_policy.h \
@@ -624,7 +632,7 @@ CMakeFiles/yhx.dir/yhx/socket.cc.o: \
  /usr/include/boost/throw_exception.hpp \
  /usr/include/boost/exception/exception.hpp \
  /usr/include/boost/assert/source_location.hpp \
- /usr/include/boost/current_function.hpp /usr/include/c++/13.2.1/cstring \
+ /usr/include/boost/current_function.hpp \
  /usr/include/boost/lexical_cast/try_lexical_convert.hpp \
  /usr/include/boost/type_traits/type_identity.hpp \
  /usr/include/boost/lexical_cast/detail/is_character.hpp \
@@ -697,6 +705,10 @@ CMakeFiles/yhx.dir/yhx/socket.cc.o: \
  /usr/include/boost/core/cmath.hpp /usr/include/boost/integer.hpp \
  /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
+ /usr/include/c++/13.2.1/iomanip \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/util/crypto_util.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/util/hash_util.h \
+ /home/yanhexi/vscode_project/YHX_Server/./yhx/util/json_util.h \
  /home/yanhexi/vscode_project/YHX_Server/yhx/macro.h \
  /home/yanhexi/vscode_project/YHX_Server/yhx/hook.h /usr/include/fcntl.h \
  /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h \

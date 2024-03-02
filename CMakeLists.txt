@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 2.8)
 project(yhx)
 
 include (cmake/utils.cmake)
@@ -36,6 +36,16 @@ set(LIB_SRC
     yhx/http/http11_parser.rl.cc
     yhx/http/http_parser.cc
     yhx/tcp_server.cc
+    yhx/stream.cc
+    yhx/streams/socket_stream.cc
+    yhx/http/http_session.cc
+    yhx/http/http_server.cc
+    # yhx/http/servlet.cc
+    # yhx/http/servlets/config_servlet.cc
+    # yhx/http/servlets/status_servlet.cc
+    # yhx/util/json_util.cc
+    # yhx/util/hash_util.cc
+    # yhx/util/crypto_util.cc
     )
 
 add_library(yhx SHARED ${LIB_SRC} )
