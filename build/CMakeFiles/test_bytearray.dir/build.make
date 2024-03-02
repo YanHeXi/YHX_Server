@@ -76,15 +76,15 @@ CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: CMakeFiles/test_bytearr
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o: CMakeFiles/test_bytearray.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o -MF CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o.d -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o -MF CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o.d -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc
 
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc > CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc > CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.i
 
 CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_bytearray.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_bytearray.cc -o CMakeFiles/test_bytearray.dir/tests/test_bytearray.cc.s
 
 # Object files for target test_bytearray
 test_bytearray_OBJECTS = \

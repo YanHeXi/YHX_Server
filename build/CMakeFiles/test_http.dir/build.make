@@ -76,15 +76,15 @@ CMakeFiles/test_http.dir/tests/test_http.cc.o: CMakeFiles/test_http.dir/flags.ma
 CMakeFiles/test_http.dir/tests/test_http.cc.o: /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc
 CMakeFiles/test_http.dir/tests/test_http.cc.o: CMakeFiles/test_http.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_http.dir/tests/test_http.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_http.dir/tests/test_http.cc.o -MF CMakeFiles/test_http.dir/tests/test_http.cc.o.d -o CMakeFiles/test_http.dir/tests/test_http.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_http.dir/tests/test_http.cc.o -MF CMakeFiles/test_http.dir/tests/test_http.cc.o.d -o CMakeFiles/test_http.dir/tests/test_http.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc
 
 CMakeFiles/test_http.dir/tests/test_http.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_http.dir/tests/test_http.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc > CMakeFiles/test_http.dir/tests/test_http.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc > CMakeFiles/test_http.dir/tests/test_http.cc.i
 
 CMakeFiles/test_http.dir/tests/test_http.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_http.dir/tests/test_http.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc -o CMakeFiles/test_http.dir/tests/test_http.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_http.cc -o CMakeFiles/test_http.dir/tests/test_http.cc.s
 
 # Object files for target test_http
 test_http_OBJECTS = \

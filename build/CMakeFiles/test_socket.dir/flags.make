@@ -8,5 +8,5 @@ CXX_INCLUDES = -I/home/yanhexi/vscode_project/YHX_Server/. -I/home/yanhexi/Downl
 
 CXX_FLAGS =  -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -lssl -lcrypto -g
 
-# Custom defines: CMakeFiles/test_socket.dir/tests/test_socket.cc.o_DEFINES = __FILE__="../tests/test_socket.cc"
+# Custom defines: CMakeFiles/test_socket.dir/tests/test_socket.cc.o_DEFINES = __FILE__="tests/test_socket.cc"
 

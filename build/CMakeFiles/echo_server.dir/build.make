@@ -76,15 +76,15 @@ CMakeFiles/echo_server.dir/examples/echo_server.cc.o: CMakeFiles/echo_server.dir
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc
 CMakeFiles/echo_server.dir/examples/echo_server.cc.o: CMakeFiles/echo_server.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/echo_server.dir/examples/echo_server.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echo_server.dir/examples/echo_server.cc.o -MF CMakeFiles/echo_server.dir/examples/echo_server.cc.o.d -o CMakeFiles/echo_server.dir/examples/echo_server.cc.o -c /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/echo_server.dir/examples/echo_server.cc.o -MF CMakeFiles/echo_server.dir/examples/echo_server.cc.o.d -o CMakeFiles/echo_server.dir/examples/echo_server.cc.o -c /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc
 
 CMakeFiles/echo_server.dir/examples/echo_server.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/echo_server.dir/examples/echo_server.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc > CMakeFiles/echo_server.dir/examples/echo_server.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc > CMakeFiles/echo_server.dir/examples/echo_server.cc.i
 
 CMakeFiles/echo_server.dir/examples/echo_server.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/echo_server.dir/examples/echo_server.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc -o CMakeFiles/echo_server.dir/examples/echo_server.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"examples/echo_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/examples/echo_server.cc -o CMakeFiles/echo_server.dir/examples/echo_server.cc.s
 
 # Object files for target echo_server
 echo_server_OBJECTS = \

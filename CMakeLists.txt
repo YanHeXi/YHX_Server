@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.27)
 project(yhx)
 
 include (cmake/utils.cmake)
@@ -60,76 +60,22 @@ set(LIBS
     pthread
     yaml-cpp)
 
-add_executable(test ../tests/test.cc)
-add_dependencies(test yhx)
-force_redefine_file_macro_for_sources(test)
 
-target_link_libraries(test ${LIBS})
+    yhx_add_executable(test_util "tests/test_util.cc" yhx "${LIBS}")
+    yhx_add_executable(test "tests/test.cc" yhx "${LIBS}")
+    yhx_add_executable(test_config "tests/test_config.cc" yhx "${LIBS}")
+    yhx_add_executable(test_thread "tests/test_thread.cc" yhx "${LIBS}")
+    yhx_add_executable(test_fiber "tests/test_fiber.cc" yhx "${LIBS}")
+    yhx_add_executable(test_scheduler "tests/test_scheduler.cc" yhx "${LIBS}")
+    yhx_add_executable(test_address "tests/test_address.cc" yhx "${LIBS}")
+    yhx_add_executable(test_socket "tests/test_socket.cc" yhx "${LIBS}")
+    yhx_add_executable(test_bytearray "tests/test_bytearray.cc" yhx "${LIBS}")
+    yhx_add_executable(test_http "tests/test_http.cc" yhx "${LIBS}")
+    yhx_add_executable(test_http_parser "tests/test_http_parser.cc" yhx "${LIBS}")
+    yhx_add_executable(test_tcp_server "tests/test_tcp_server.cc" yhx "${LIBS}")
+    yhx_add_executable(echo_server "examples/echo_server.cc" yhx "${LIBS}")
+    yhx_add_executable(test_http_server "tests/test_http_server.cc" yhx "${LIBS}")
 
-add_executable(test_config ../tests/test_config.cc)
-add_dependencies(test_config yhx)
-force_redefine_file_macro_for_sources(test_config)
-target_link_libraries(test_config ${LIBS})
-
-add_executable(test_thread ../tests/test_thread.cc)
-add_dependencies(test_thread yhx)
-force_redefine_file_macro_for_sources(test_thread)
-target_link_libraries(test_thread ${LIBS})
-
-add_executable(test_util ../tests/test_util.cc)
-add_dependencies(test_util yhx)
-force_redefine_file_macro_for_sources(test_util)
-target_link_libraries(test_util ${LIBS})
-
-add_executable(test_fiber ../tests/test_fiber.cc)
-add_dependencies(test_fiber yhx)
-force_redefine_file_macro_for_sources(test_fiber)
-target_link_libraries(test_fiber ${LIBS})
-
-add_executable(test_scheduler ../tests/test_scheduler.cc)
-add_dependencies(test_scheduler yhx)
-force_redefine_file_macro_for_sources(test_scheduler)
-target_link_libraries(test_scheduler ${LIBS})
-
-add_executable(test_hook ../tests/test_hook.cc)
-add_dependencies(test_hook yhx)
-force_redefine_file_macro_for_sources(test_hook)
-target_link_libraries(test_hook ${LIBS})
-
-add_executable(test_address ../tests/test_address.cc)
-add_dependencies(test_address yhx)
-force_redefine_file_macro_for_sources(test_address)
-target_link_libraries(test_address ${LIBS})
-
-add_executable(test_socket ../tests/test_socket.cc)
-add_dependencies(test_socket yhx)
-force_redefine_file_macro_for_sources(test_socket)
-target_link_libraries(test_socket ${LIBS})
-
-add_executable(test_bytearray ../tests/test_bytearray.cc)
-add_dependencies(test_bytearray yhx)
-force_redefine_file_macro_for_sources(test_bytearray)
-target_link_libraries(test_bytearray ${LIBS})
-
-add_executable(test_http ../tests/test_http.cc)
-add_dependencies(test_http yhx)
-force_redefine_file_macro_for_sources(test_http)
-target_link_libraries(test_http ${LIBS})
-
-add_executable(test_http_parser ../tests/test_http_parser.cc)
-add_dependencies(test_http_parser yhx)
-force_redefine_file_macro_for_sources(test_http_parser)
-target_link_libraries(test_http_parser ${LIBS})
-
-add_executable(test_tcp_server ../tests/test_tcp_server.cc)
-add_dependencies(test_tcp_server yhx)
-force_redefine_file_macro_for_sources(test_tcp_server)
-target_link_libraries(test_tcp_server ${LIBS})
-
-add_executable(echo_server ../examples/echo_server.cc)
-add_dependencies(echo_server yhx)
-force_redefine_file_macro_for_sources(echo_server)
-target_link_libraries(echo_server ${LIBS})
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)

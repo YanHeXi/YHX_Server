@@ -76,15 +76,15 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: CMakeFiles/test_socket.dir/fl
 CMakeFiles/test_socket.dir/tests/test_socket.cc.o: /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc
 CMakeFiles/test_socket.dir/tests/test_socket.cc.o: CMakeFiles/test_socket.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/yanhexi/vscode_project/YHX_Server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_socket.dir/tests/test_socket.cc.o"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_socket.dir/tests/test_socket.cc.o -MF CMakeFiles/test_socket.dir/tests/test_socket.cc.o.d -o CMakeFiles/test_socket.dir/tests/test_socket.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_socket.dir/tests/test_socket.cc.o -MF CMakeFiles/test_socket.dir/tests/test_socket.cc.o.d -o CMakeFiles/test_socket.dir/tests/test_socket.cc.o -c /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc
 
 CMakeFiles/test_socket.dir/tests/test_socket.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_socket.dir/tests/test_socket.cc.i"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc > CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc > CMakeFiles/test_socket.dir/tests/test_socket.cc.i
 
 CMakeFiles/test_socket.dir/tests/test_socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_socket.dir/tests/test_socket.cc.s"
-	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"../tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc -o CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+	/usr/bin/g++ $(CXX_DEFINES) -D__FILE__=\"tests/test_socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yanhexi/vscode_project/YHX_Server/tests/test_socket.cc -o CMakeFiles/test_socket.dir/tests/test_socket.cc.s
 
 # Object files for target test_socket
 test_socket_OBJECTS = \
