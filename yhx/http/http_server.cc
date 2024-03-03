@@ -12,7 +12,7 @@ static yhx::Logger::ptr g_logger = YHX_LOG_NAME("system");
 HttpServer::HttpServer(bool keepalive, yhx::IOManager* worker,
                        yhx::IOManager* io_worker, yhx::IOManager* accept_worker)
     : TcpServer(worker, io_worker, accept_worker), m_isKeepalive(keepalive) {
-  // m_dispatch.reset(new ServletDispatch);
+  m_dispatch.reset(new ServletDispatch);
 
   m_type = "http";
   // m_dispatch->addServlet("/_/status", Servlet::ptr(new StatusServlet));
@@ -39,10 +39,11 @@ void HttpServer::handleClient(Socket::ptr client) {
 
     HttpResponse::ptr rsp(
         new HttpResponse(req->getVersion(), req->isClose() || !m_isKeepalive));
-    rsp->setHeader("Server", getName());
-    rsp->setBody("Server start");
-    YHX_LOG_INFO(g_logger) << *req << std::endl;
-    YHX_LOG_INFO(g_logger) << *rsp << std::endl;
+    m_dispatch->handle(req, rsp, session);
+    // rsp->setHeader("Server", getName());
+    // rsp->setBody("Server start");
+    // YHX_LOG_INFO(g_logger) << *req << std::endl;
+    // YHX_LOG_INFO(g_logger) << *rsp << std::endl;
     // m_dispatch->handle(req, rsp, session);
     session->sendResponse(rsp);
 

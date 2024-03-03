@@ -7,28 +7,28 @@ static yhx::Logger::ptr g_logger = YHX_LOG_ROOT();
 
 yhx::IOManager::ptr worker;
 void run() {
-  // g_logger->setLevel(yhx::LogLevel::Level::INFO);
-  // yhx::http::HttpServer::ptr server(new yhx::http::HttpServer(true,
-  // worker.get(), yhx::IOManager::GetThis()));
+  g_logger->setLevel(yhx::LogLevel::Level::INFO);
+  // yhx::http::HttpServer::ptr server(
+  // new yhx::http::HttpServer(true, worker.get(), yhx::IOManager::GetThis()));
   yhx::http::HttpServer::ptr server(new yhx::http::HttpServer);
   yhx::Address::ptr addr = yhx::Address::LookupAnyIPAddress("0.0.0.0:8020");
   while (!server->bind(addr)) {
     sleep(2);
   }
-  // auto sd = server->getServletDispatch();
-  // sd->addServlet("/yhx/xx", [](yhx::http::HttpRequest::ptr req,
-  //                              yhx::http::HttpResponse::ptr rsp,
-  //                              yhx::http::HttpSession::ptr session) {
-  //   rsp->setBody(req->toString());
-  //   return 0;
-  // });
+  auto sd = server->getServletDispatch();
+  sd->addServlet("/yhx/xx", [](yhx::http::HttpRequest::ptr req,
+                               yhx::http::HttpResponse::ptr rsp,
+                               yhx::http::HttpSession::ptr session) {
+    rsp->setBody(req->toString());
+    return 0;
+  });
 
-  // sd->addGlobServlet("/yhx/*", [](yhx::http::HttpRequest::ptr req,
-  //                                 yhx::http::HttpResponse::ptr rsp,
-  //                                 yhx::http::HttpSession::ptr session) {
-  //   rsp->setBody("Glob:\r\n" + req->toString());
-  // return 0;
-  // });
+  sd->addGlobServlet("/yhx/*", [](yhx::http::HttpRequest::ptr req,
+                                  yhx::http::HttpResponse::ptr rsp,
+                                  yhx::http::HttpSession::ptr session) {
+    rsp->setBody("Glob:\r\n" + req->toString());
+    return 0;
+  });
 
   // sd->addGlobServlet("/yhxx/*", [](yhx::http::HttpRequest::ptr req,
   //                                  yhx::http::HttpResponse::ptr rsp,
