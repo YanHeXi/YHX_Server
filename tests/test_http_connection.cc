@@ -56,13 +56,12 @@ void run() {
 
   YHX_LOG_INFO(g_logger) << "=========================";
 
-  //   auto r = yhx::http::HttpConnection::DoGet("http://www.yhx.top/blog/",
-  //   300);
-  //   YHX_LOG_INFO(g_logger) << "result=" << r->result << " error=" << r->error
-  //                          << " rsp="
-  //                          << (r->response ? r->response->toString() : "");
+  auto r = yhx::http::HttpConnection::DoGet("http://www.baidu.com/", 300);
+  YHX_LOG_INFO(g_logger) << "result=" << r->result << " error=" << r->error
+                         << " rsp="
+                         << (r->response ? r->response->toString() : "");
 
-  //   YHX_LOG_INFO(g_logger) << "=========================";
+  YHX_LOG_INFO(g_logger) << "=========================";
   //   test_pool();
 }
 
@@ -164,7 +163,7 @@ void test_parser() {
 }
 
 int main(int argc, char** argv) {
-  yhx::IOManager iom(3);
+  yhx::IOManager iom(2);
   iom.schedule(run);
   // iom.schedule(test_parser);
   return 0;

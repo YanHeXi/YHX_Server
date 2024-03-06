@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+415a452c5a51414a02c3efa0b2417d35 /home/yhx/project/YHX_Server/yhx/http/http11_parser.rl.cc
+5048ef265bac05bb52318baefd678de3 /home/yhx/project/YHX_Server/yhx/http/httpclient_parser.rl.cc
+a8ef29f24a7716b20ed312bac79d5bb6 /home/yhx/project/YHX_Server/yhx/uri.rl.cc

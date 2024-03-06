@@ -1,16 +1,20 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.25)
 project(yhx)
+
+find_package(OpenSSL REQUIRED)
+if(OPENSSL_FOUND)
+    include_directories(${OPENSSL_INCLUDE_DIR})
+endif()
 
 include (cmake/utils.cmake)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O -g -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -lssl -lcrypto")
 
-find_package(OpenSSL REQUIRED)
 
 include_directories(.)
-include_directories(/home/yanhexi/Downloads/tool)
+include_directories(/home/yhx/project/YHX_Server/include)
 
-link_directories(/home/yanhexi/vscode_project/YHX_Server/lib)
+link_directories(/home/yhx/vscode_project/YHX_Server/lib)
 
 
 # message("***",${YAMLCPP})
@@ -42,6 +46,7 @@ set(LIB_SRC
     yhx/http/http_server.cc
     yhx/http/servlet.cc
     yhx/http/http_connection.cc
+    yhx/uri.rl.cc
     # yhx/http/servlets/config_servlet.cc
     # yhx/http/servlets/status_servlet.cc
     # yhx/util/json_util.cc
@@ -63,7 +68,10 @@ set(LIBS
     yhx
     dl
     pthread
-    yaml-cpp)
+    yaml-cpp
+    jsoncpp
+    ${OPENSSL_LIBRARIES}
+    )
 
 
     yhx_add_executable(test_util "tests/test_util.cc" yhx "${LIBS}")
@@ -81,6 +89,7 @@ set(LIBS
     yhx_add_executable(echo_server "examples/echo_server.cc" yhx "${LIBS}")
     yhx_add_executable(test_http_server "tests/test_http_server.cc" yhx "${LIBS}")
     yhx_add_executable(test_http_connection "tests/test_http_connection.cc" yhx "${LIBS}")
+
     yhx_add_executable(test_uri "tests/test_uri.cc" yhx "${LIBS}")
     
 
