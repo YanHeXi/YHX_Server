@@ -1,5 +1,5 @@
 ## code from BiliBili 岩禾溪
-#### 借鉴了salar的框架项目https://github.com/sylar-yin/sylar
+
 
 
 ### 更新记录
